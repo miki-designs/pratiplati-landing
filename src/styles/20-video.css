@@ -1,0 +1,7 @@
+/* VIDEO DIALOG */
+dialog.vd{padding:0;border:0;background:transparent;width:min(1100px,94vw);max-width:none;overflow:visible}
+dialog.vd::backdrop{background:rgba(2,8,20,.82);backdrop-filter:blur(6px)}
+.vd-box{position:relative;border-radius:22px;overflow:hidden;background:#000;box-shadow:0 40px 120px -20px rgba(0,0,0,.9)}
+.vd video{width:100%;aspect-ratio:16/9;background:#000}
+.vd-x{position:absolute;right:-14px;top:-56px;width:48px;height:48px;border-radius:999px;border:1px solid var(--line-d2);background:rgba(250,250,247,.1);color:var(--porcelain);cursor:pointer;display:grid;place-items:center}
+.vd-x svg{width:20px;height:20px;stroke:currentColor;stroke-width:2.2;fill:none;stroke-linecap:round}

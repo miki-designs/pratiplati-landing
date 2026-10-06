@@ -1,0 +1,14 @@
+/* FINALNI CTA */
+.final{padding-block:clamp(40px,6vw,80px)}
+.final-card{position:relative;overflow:hidden;border-radius:40px;background:radial-gradient(90% 120% at 85% 10%,#16408a 0%,#0b2350 40%,var(--prussian) 75%);color:var(--porcelain);padding:clamp(40px,6vw,88px);display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:48px;align-items:center}
+.final-card .dots{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='44'%3E%3Crect x='17.5' y='17.5' width='9' height='9' rx='2.2' fill='%23a8b4c8' fill-opacity='0.16'/%3E%3C/svg%3E");right:-30px;bottom:-30px;width:380px;height:300px;-webkit-mask-image:linear-gradient(315deg,#000 25%,transparent 80%);mask-image:linear-gradient(315deg,#000 25%,transparent 80%)}
+.final-card .h2{max-width:14ch}
+.final-card .lead{color:var(--mist)}
+.final-card .ctas{justify-content:flex-start;margin-top:32px}
+.final-card .ctas .btn{flex:1 1 230px}
+.final-vis{position:relative;rotate:3deg}
+.final-vis .poster{width:100%;border-radius:22px;box-shadow:0 50px 90px -40px rgba(0,0,0,.9)}
+.final-vis .play{width:76px;height:76px}
+.final-vis .play svg{width:24px;height:24px}
+.final .curl{width:120px;left:-10px;top:-120px;scale:-1 1;rotate:8deg;opacity:.45}
+.spark{position:absolute;right:-38px;top:-40px;width:60px;height:60px;stroke:var(--porcelain);stroke-width:3;stroke-linecap:round;fill:none}

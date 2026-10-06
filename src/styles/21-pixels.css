@@ -1,0 +1,5 @@
+/* ILUSTRACIJE */
+.pix rect{transform-box:fill-box;transform-origin:center}
+.pix .p1{fill:var(--pix1,var(--prussian))}.pix .p2{fill:var(--pix2,var(--mist))}.pix .p3{fill:var(--pix3,var(--mist-2))}
+.start{--pix1:var(--porcelain);--pix2:var(--mist);--pix3:rgba(168,180,200,.32)}
+.priv{--pix1:var(--prussian);--pix2:var(--mist);--pix3:var(--mist-2)}

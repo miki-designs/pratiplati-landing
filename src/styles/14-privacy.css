@@ -1,0 +1,9 @@
+/* PRIVATNOST */
+.priv{background:linear-gradient(180deg,#e8eefa 0%,#f1f4fa 100%)}
+.priv-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:64px;align-items:center}
+.priv .pix{width:min(300px,70%);height:auto}
+.priv-items{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:44px}
+.pi{border:1px solid #dde3ee;border-radius:22px;padding:24px;background:var(--paper);box-shadow:0 30px 60px -48px rgba(1,22,56,.45)}
+.pi .ico{color:var(--prussian)}
+.pi h3{margin:16px 0 0;font-size:18px;font-weight:800}
+.pi p{margin:6px 0 0;font-size:15px;line-height:1.55;color:var(--muted)}

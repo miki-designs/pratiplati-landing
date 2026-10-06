@@ -1,0 +1,23 @@
+/* FAQ (kartice) */
+.faq-grid{grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:72px}
+.faq-sec{overflow:clip}
+.faq-side{isolation:isolate}
+.faq-pix{position:absolute;z-index:-1;left:-44px;top:-90px;height:clamp(440px,42vw,600px);width:auto;max-width:none;pointer-events:none}
+.faq-side .faq-pix rect{fill:none;stroke:rgba(63,142,252,.24);stroke-width:1.5px;vector-effect:non-scaling-stroke}
+.faq-sec .h2{max-width:14ch}
+.ask{margin-top:36px;padding:28px;border-radius:24px;background:radial-gradient(120% 90% at 100% 0%,#0f2a5c 0%,var(--prussian) 60%);color:var(--porcelain);box-shadow:0 40px 80px -50px rgba(1,22,56,.7);display:flex;flex-direction:column;gap:6px;align-items:flex-start;max-width:420px}
+.ask b{font-size:19px;font-weight:800}
+.ask p{margin:0 0 16px;color:var(--mist)}
+.ask-m{display:none}
+.faq{border-top:0;display:flex;flex-direction:column;gap:12px;position:relative;z-index:1}
+.qa{background:var(--paper);border:1px solid var(--line-l);border-radius:22px;transition:background-color 260ms var(--ease),border-color 260ms var(--ease),box-shadow 260ms var(--ease)}
+.qa:hover{border-color:#cfd5df}
+.faq .qa{border-bottom:1px solid var(--line-l)}
+.qa summary{padding:24px 26px;gap:18px}
+.qn{flex:none;font-size:14px;font-weight:800;color:var(--muted);font-variant-numeric:tabular-nums;width:26px}
+.qt{flex:1}
+.qa .ans{padding:0 26px 26px 70px;font-size:17px}
+.qa[open]{background:var(--prussian);color:var(--porcelain);border-color:transparent;box-shadow:0 40px 80px -50px rgba(1,22,56,.7)}
+.qa[open] .qn,.qa[open] .ans{color:var(--mist)}
+.faq .qa[open] summary i{background:var(--porcelain);border-color:transparent}
+.faq .qa[open] summary i::before,.faq .qa[open] summary i::after{background:var(--prussian)}

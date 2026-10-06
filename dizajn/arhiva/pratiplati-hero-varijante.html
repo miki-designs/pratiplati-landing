@@ -1,0 +1,547 @@
+<!doctype html>
+<html lang="sr-Latn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PratiPlati hero varijante</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ================= TOKENI ================= */
+:root{
+  --prussian:#011638; --night:#040a17; --porcelain:#fafaf7; --mist:#a8b4c8; --cta:#3f8efc; --cta-hover:#5b9ffd; --cta-light:#3172cf;
+  --surface:#0a1730; --surface-2:#0f2142; --line:rgba(168,180,200,.16); --line-strong:rgba(168,180,200,.32);
+  --app-border:#e3e2dc; --app-border-strong:#d5d4cd; --app-soft:#f2f1ec; --app-muted:#5c5b54; --app-row:#ecebe5; --app-primary-soft:#dbe9fe;
+  --font:'Manrope','Helvetica Neue',Arial,sans-serif; --ease:cubic-bezier(.2,.7,.2,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#d9d9d5;font-family:var(--font);color:var(--porcelain)}
+img,svg{display:block}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--porcelain);outline-offset:3px;border-radius:6px}
+.sr{position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+
+/* ================= OKVIR TABLE ================= */
+.bb{position:sticky;top:0;z-index:60;display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;padding:10px 20px;background:#1b1b19;color:#ececea;font-size:13px}
+.bb b{margin-right:6px}
+.bb a{color:#ececea;text-decoration:none;padding:6px 10px;border-radius:8px;background:#333331}
+.bb a:hover{background:#4a4a47}
+.bl{max-width:1440px;margin:56px auto 14px;padding:0 20px}
+.bl h2{margin:0;font-size:22px;font-weight:800;color:#1b1b19}
+.bl p{margin:6px 0 0;font-size:14px;color:#55554f;line-height:1.55;max-width:96ch}
+.bf{max-width:1440px;margin:0 auto;overflow:hidden;box-shadow:0 20px 50px -20px rgba(0,0,0,.4)}
+.devs{display:flex;flex-wrap:wrap;gap:36px;justify-content:center;padding:0 20px 90px}
+.devs figure{margin:0;display:flex;flex-direction:column;align-items:center;gap:10px}
+.devs figcaption{font-size:13px;color:#55554f;font-weight:600}
+.dev{width:390px;max-width:100%;height:844px;border-radius:46px;border:11px solid #111;background:#111;overflow:hidden;box-shadow:0 30px 60px -20px rgba(0,0,0,.5)}
+.dev-scroll{height:100%;overflow-y:auto;border-radius:35px;background:var(--night)}
+
+/* ================= ZAJEDNIČKO ================= */
+.mark{width:17px;height:28px;flex:none}
+.mark-sm{width:13px;height:22px;flex:none}
+.wrap{max-width:1240px;margin:0 auto;padding-inline:clamp(16px,4cqi,40px)}
+.hd{display:flex;align-items:center;gap:32px;padding-block:20px;position:relative;z-index:5}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:18px;letter-spacing:-.02em;text-decoration:none;min-height:44px;color:var(--porcelain)}
+.nav{display:flex;gap:2px}
+.nav a{color:var(--mist);text-decoration:none;font-size:15px;font-weight:500;padding:10px 12px;border-radius:8px}
+.hd-right{margin-left:auto;display:flex;align-items:center;gap:6px}
+.login{color:var(--mist);text-decoration:none;font-size:14px;font-weight:600;padding:0 12px;min-height:44px;display:inline-flex;align-items:center}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 24px;border-radius:14px;font:700 16px/1 var(--font);text-decoration:none;border:1px solid transparent;cursor:pointer;transition:background-color 150ms var(--ease),border-color 150ms var(--ease)}
+.btn-cta{background:var(--cta);color:var(--prussian)}
+.btn-cta:hover{background:var(--cta-hover)}
+.btn-line{border-color:var(--line-strong);color:var(--porcelain);font-weight:600;background:transparent}
+.btn-line:hover{border-color:var(--porcelain)}
+.btn-sm{min-height:44px;padding:0 18px;font-size:15px}
+.short{display:none}
+.kicker{display:flex;align-items:center;gap:12px;margin:0;font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--mist)}
+.kicker::before{content:"";width:28px;height:2px;background:var(--mist)}
+.lede{margin:0;font-size:clamp(18px,1.8cqi,22px);line-height:1.55;color:var(--mist);max-width:44ch}
+.ctas{display:flex;flex-wrap:wrap;gap:12px}
+.note{margin:14px 0 0;font-size:14px;line-height:1.5;color:var(--mist)}
+.h2{margin:0;font-size:clamp(34px,5cqi,68px);line-height:1;font-weight:800;letter-spacing:-.04em;max-width:17ch;text-wrap:balance}
+.eyebrow{font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--app-muted)}
+
+/* ================= FRAGMENTI HAOSA ================= */
+.chaos{position:relative;overflow:hidden}
+.fr{position:absolute;box-shadow:0 22px 46px -18px rgba(0,0,0,.75)}
+.far{filter:blur(1.6px);opacity:.5;scale:.88}
+.mid{opacity:.8}
+.bub{max-width:260px;background:#e9e8e3;color:var(--prussian);font-size:14px;line-height:1.38;padding:10px 13px 9px;border-radius:18px 18px 18px 5px}
+.bub b{display:block;font-size:11.5px;color:#55534c;margin-bottom:2px}
+.bub small{display:block;margin-top:4px;font-size:10.5px;color:#7a7870;text-align:right}
+.bub.me{background:#c9d6ea;border-radius:18px 18px 5px 18px}
+.bub .pic{display:block;width:150px;height:96px;margin:4px 0 2px;border-radius:10px;background:repeating-linear-gradient(0deg,#f6f5f0 0 7px,#d9d6cc 7px 8px);border:1px solid #cfccc2}
+.slip{width:230px;background:#fdfcf7;color:#3a3a35;border-radius:3px;padding:10px 12px 12px;font-size:8.5px;line-height:1.2;border:1px solid #e2dfd5}
+.slip h5{margin:0 0 7px;font-size:10px;font-weight:800;letter-spacing:.12em;color:#2b2b27}
+.slip .g{display:grid;grid-template-columns:1.4fr 1fr;gap:6px 10px}
+.slip .bx{border:1px solid #bdb9ad;border-radius:2px;min-height:18px;padding:3px 5px;font-size:9px;color:#2b2b27;margin-top:2px}
+.slip .bx.t{min-height:30px}
+.slip::after{content:"";position:absolute;inset:0;background:linear-gradient(130deg,rgba(255,255,255,.25),rgba(0,0,0,.06) 60%,rgba(0,0,0,.14));pointer-events:none}
+.sheet{width:270px;display:grid;grid-template-columns:1.15fr .5fr 1.5fr;background:#fff;color:var(--prussian);border-radius:6px;overflow:hidden;font-size:12px;border:1px solid #d7d5cd}
+.sheet span{padding:5px 7px;border-right:1px solid #e6e4dd;border-bottom:1px solid #e6e4dd;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sheet span:nth-child(3n){border-right:0}
+.sheet .h{background:#eceee8;font-weight:700;font-size:10.5px;color:#5c5b54}
+.sheet .q{font-weight:800;background:#fff2a8}
+.sheet .x{background:#e9e8e3;color:#8a887f}
+.mail{width:270px;background:#fff;color:var(--prussian);border-radius:10px;padding:10px 12px;font-size:12.5px;display:grid;grid-template-columns:auto 1fr;gap:2px 10px;align-items:center}
+.mail i{grid-row:span 2;width:30px;height:30px;border-radius:999px;background:#e3e2dc;display:grid;place-items:center;font-style:normal;font-size:11px;font-weight:800;color:#5c5b54}
+.mail b{font-size:12.5px}
+.mail span{font-size:11.5px;color:#5c5b54;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sticky{width:150px;background:#f3e58a;color:#3d3700;font-weight:700;font-size:14px;line-height:1.3;padding:12px 12px 16px}
+.notif{width:290px;background:rgba(250,250,247,.96);color:var(--prussian);border-radius:16px;padding:10px 12px;display:grid;grid-template-columns:28px 1fr auto;gap:2px 10px;align-items:center;font-size:12.5px;backdrop-filter:blur(6px)}
+.notif i{grid-row:span 2;width:28px;height:28px;border-radius:8px;background:#5c5b54;position:relative}
+.notif i::after{content:"";position:absolute;inset:8px 7px 9px;border-radius:4px;border:2px solid #fafaf7;border-bottom-left-radius:0}
+.notif b{font-size:12.5px}
+.notif small{font-size:10.5px;color:#6b6a63}
+.notif span{grid-column:2/4;color:#3a3a35;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.count{position:absolute;min-width:30px;height:30px;padding:0 8px;border-radius:999px;background:var(--porcelain);color:var(--prussian);font-weight:800;font-size:14px;display:grid;place-items:center;box-shadow:0 0 0 4px rgba(4,10,23,.9)}
+@media (prefers-reduced-motion:no-preference){
+  .drift{animation:drift var(--d,7s) ease-in-out infinite alternate}
+  .drift.b{--d:9s;animation-delay:-3s}.drift.c{--d:6s;animation-delay:-1s}.drift.e{--d:11s;animation-delay:-5s}
+}
+@keyframes drift{from{translate:0 0}to{translate:var(--dx,6px) var(--dy,-8px)}}
+
+/* ================= APP UI ================= */
+.badge{display:inline-flex;align-items:center;gap:6px;padding:4px 9px;border-radius:999px;font-size:10.5px;font-weight:700;letter-spacing:.05em;border:1px solid;white-space:nowrap;line-height:1.3}
+.badge::before{content:"";width:7px;height:7px;border-radius:999px;box-sizing:border-box;flex:none}
+.b-paid{background:#eff8f1;color:#24552e;border-color:#c9e3cf}.b-paid::before{background:#69a875}
+.b-pend{background:#fffbea;color:#5f5000;border-color:#f0dd8c}.b-pend::before{border:2px solid #e6c84f}
+.b-wait{background:var(--app-soft);color:var(--app-muted);border-color:var(--app-border)}.b-wait::before{border:1.5px solid #a8a79e}
+.b-rej{background:#fff1f0;color:#7a2924;border-color:#f1c5c1}.b-rej::before{background:#d97872}
+.ledger{background:#fff;color:var(--prussian);border-radius:20px;padding:18px 20px;border:1px solid var(--app-border-strong);box-shadow:0 40px 80px -40px rgba(1,22,56,.45);font-family:var(--font)}
+.ledger-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding-bottom:12px;border-bottom:1px solid var(--app-row)}
+.ledger-head b{font-size:17px;font-weight:800}
+.ledger-head span{font-size:12.5px;color:var(--app-muted)}
+.lrow{display:grid;grid-template-columns:1fr auto auto;gap:16px;align-items:center;padding:11px 0;border-bottom:1px solid var(--app-row);font-size:14px}
+.lrow:last-child{border-bottom:0;padding-bottom:2px}
+.lrow b{font-weight:600}
+.lrow small{color:var(--app-muted);font-size:12.5px;font-variant-numeric:tabular-nums}
+.phone{width:min(290px,100%);aspect-ratio:9/19.5;display:flex;padding:9px;background:#050a14;border-radius:44px;border:1px solid #2a3550;box-shadow:0 40px 80px -24px rgba(0,0,0,.7)}
+.screen{flex:1;min-height:0;position:relative;border-radius:36px;overflow:hidden;background:var(--porcelain);color:var(--prussian);--mk-main:#011638;--mk-tail:#A8B4C8}
+.screen::before{content:"";position:absolute;top:9px;left:50%;transform:translateX(-50%);width:74px;height:21px;border-radius:999px;background:#050a14;z-index:2}
+.pb{padding:40px 14px 14px;display:flex;flex-direction:column;gap:10px}
+.ptop{display:flex;justify-content:space-between;align-items:center;font-weight:700;font-size:14px}
+.ptop span{display:flex;align-items:center;gap:7px}
+.pav{width:30px;height:30px;border-radius:999px;background:var(--app-primary-soft);display:grid;place-items:center;font-size:11px;font-weight:700}
+.pnav{display:flex;gap:4px;font-size:11.5px;color:var(--app-muted);overflow:hidden}
+.pnav span{padding:5px 8px;border-radius:999px;white-space:nowrap}
+.pnav .on{background:var(--app-primary-soft);color:var(--prussian);font-weight:700}
+.ptitle{display:flex;justify-content:space-between;align-items:baseline}
+.ptitle b{font-size:20px;font-weight:800;letter-spacing:-.02em}
+.ptitle small{font-size:11.5px;color:var(--app-muted)}
+.dl{background:#fff;border:1px solid var(--app-border);border-radius:16px;padding:2px 11px}
+.dl div{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:9px 0;border-bottom:1px solid var(--app-row);font-size:12.5px}
+.dl div:last-child{border-bottom:0}
+.dl b{display:block;font-weight:700;font-size:12.5px}
+.dl small{font-size:10.5px;color:var(--app-muted)}
+.inbox{padding:40px 14px 14px;display:flex;flex-direction:column}
+.ib-h{display:flex;justify-content:space-between;align-items:baseline;padding-bottom:8px}
+.ib-h b{font-size:22px;font-weight:800;letter-spacing:-.02em}
+.ib-h small{font-size:11.5px;color:var(--app-muted);font-weight:600}
+.ib-s{height:30px;border-radius:10px;background:var(--app-soft);margin-bottom:6px}
+.ib{display:grid;grid-template-columns:34px 1fr auto;gap:2px 10px;align-items:center;padding:8px 0;border-bottom:1px solid var(--app-row)}
+.ib i{grid-row:span 2;width:34px;height:34px;border-radius:999px;background:#e3e2dc;display:grid;place-items:center;font-style:normal;font-size:11px;font-weight:800;color:#5c5b54}
+.ib b{font-size:12.5px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ib span{font-size:11.5px;color:var(--app-muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ib small{font-size:10px;color:var(--app-muted);text-align:right}
+.ib em{justify-self:end;font-style:normal;min-width:20px;height:20px;padding:0 6px;border-radius:999px;background:var(--prussian);color:var(--porcelain);font-size:10.5px;font-weight:800;display:grid;place-items:center}
+.tile{background:var(--prussian);color:var(--mist);border-radius:12px;padding:12px 14px;font-size:12px;font-weight:600;display:flex;flex-direction:column;gap:4px}
+.tile b{font-size:26px;font-weight:800;letter-spacing:-.03em;color:var(--porcelain)}
+.tile b span{color:var(--mist)}
+
+/* ================= VARIJANTA 1: rame uz rame ================= */
+.v1{container:v1/inline-size;background:var(--night);--mk-main:#FAFAF7;--mk-tail:#A8B4C8}
+.v1-hero{background:linear-gradient(180deg,var(--prussian) 0%,var(--night) 100%)}
+.v1-top{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:48px;align-items:end;padding-block:clamp(32px,5cqi,72px) clamp(40px,5cqi,64px)}
+.v1 h1{margin:18px 0 0;font-size:clamp(46px,7.6cqi,108px);line-height:.95;font-weight:800;letter-spacing:-.05em}
+.v1 h1 span{color:var(--mist)}
+.v1-stage{display:grid;grid-template-columns:1fr 1fr;min-height:800px;border-top:1px solid var(--line)}
+.v1-chaos{background:radial-gradient(120% 90% at 30% 40%,#0d1d3d 0%,#050c1c 70%)}
+.v1-chaos::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(4,10,23,0) 70%,rgba(4,10,23,.6));pointer-events:none}
+.v1-calm{position:relative;background:var(--porcelain);display:flex;align-items:center;justify-content:center;padding:230px clamp(20px,4cqi,64px) 72px}
+.v1-calm .ledger{width:min(520px,100%)}
+.tag{position:absolute;top:24px;left:clamp(20px,3cqi,40px);z-index:4;display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border-radius:999px;font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+.tag.dark{background:rgba(250,250,247,.08);color:var(--porcelain);border:1px solid var(--line-strong)}
+.tag.light{background:var(--prussian);color:var(--porcelain)}
+.big-tag{position:absolute;top:clamp(28px,3.4cqi,48px);left:clamp(20px,3.4cqi,48px);right:clamp(20px,3.4cqi,48px);z-index:5;pointer-events:none}
+.big-tag .bt{margin:0;font-size:clamp(44px,6.4cqi,96px);line-height:.95;font-weight:800;letter-spacing:-.045em}
+.big-tag .bs{margin:12px 0 0;font-size:clamp(16px,1.5cqi,19px);line-height:1.45;font-weight:600;max-width:30ch}
+.big-tag.dark .bt{color:var(--porcelain);text-shadow:0 4px 30px rgba(4,10,23,.9)}
+.big-tag.dark .bs{color:var(--mist)}
+.big-tag.light .bt{color:var(--prussian)}
+.big-tag.light .bs{color:var(--app-muted)}
+.v1-seam{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:6;width:68px;height:68px;border-radius:22px;background:var(--prussian);display:grid;place-items:center;box-shadow:0 0 0 8px var(--porcelain),0 20px 40px -10px rgba(0,0,0,.6)}
+.v1-seam .mark{width:21px;height:35px}
+.v1-stagewrap{position:relative}
+/* posle heroa: sta se menja */
+.v1-diff{padding-block:clamp(72px,10cqi,136px)}
+.diff{margin-top:48px;border-top:1px solid var(--line)}
+.diff-head{display:grid;grid-template-columns:1fr 64px 1fr;gap:24px;padding:16px 0;font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--mist);border-bottom:1px solid var(--line)}
+.diff-row{display:grid;grid-template-columns:1fr 64px 1fr;gap:24px;align-items:center;padding:28px 0;border-bottom:1px solid var(--line)}
+.diff-cell{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:20px;align-items:center}
+.diff-cell p{margin:0;font-size:clamp(18px,1.9cqi,22px);line-height:1.35;font-weight:700}
+.diff-row .old p{color:var(--mist)}
+.diff-arrow{justify-self:center;width:44px;height:44px;border-radius:999px;border:1px solid var(--line-strong);display:grid;place-items:center}
+.mini{position:relative;min-height:110px;display:flex;align-items:center}
+.mini .fr{position:relative;box-shadow:0 12px 30px -14px rgba(0,0,0,.7)}
+.mini-card{background:#fff;color:var(--prussian);border-radius:14px;padding:12px 14px;font-size:12.5px;width:100%;max-width:290px;box-shadow:0 18px 40px -20px rgba(0,0,0,.7)}
+.mini-card .row{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:6px 0;border-bottom:1px solid var(--app-row)}
+.mini-card .row:last-child{border-bottom:0}
+.thumb{width:36px;height:44px;border-radius:5px;border:1px solid var(--app-border);background:repeating-linear-gradient(0deg,#f3f2ee 0 5px,#e2e0d9 5px 6px);flex:none}
+.lock{display:flex;align-items:center;gap:10px}
+.lock svg{flex:none}
+@container v1 (max-width:1000px){.nav{display:none}}
+@container v1 (max-width:900px){
+  .v1-top{grid-template-columns:1fr;gap:28px}
+  .v1-stage{grid-template-columns:1fr;min-height:0}
+  .v1-chaos{height:640px}
+  .v1-calm{padding:200px 16px 40px}
+  .v1-seam{top:640px}
+  .diff-head{display:none}
+  .diff-row{grid-template-columns:1fr;gap:14px}
+  .diff-arrow{rotate:90deg;justify-self:start}
+  .diff-cell{grid-template-columns:1fr;gap:12px}
+}
+@container v1 (max-width:560px){
+  .login,.long{display:none}.short{display:inline}
+  .ctas{flex-direction:column}.ctas .btn{width:100%}
+  .lrow small{display:none}
+  .v1-chaos .hide-s{display:none}
+}
+
+/* ================= VARIJANTA 2: zid haosa ================= */
+.v2{container:v2/inline-size;background:var(--night);--mk-main:#FAFAF7;--mk-tail:#A8B4C8}
+.v2-hero{position:relative;min-height:1060px;background:linear-gradient(180deg,var(--prussian) 0%,var(--night) 100%);overflow:hidden}
+.v2-wall{position:absolute;inset:0}
+.v2-calm{position:absolute;inset:0;background:radial-gradient(ellipse 36% 56% at 50% 52%,var(--night) 0%,rgba(4,10,23,.96) 55%,rgba(4,10,23,.55) 78%,rgba(4,10,23,0) 100%);pointer-events:none}
+.v2-center{position:relative;z-index:3;display:flex;flex-direction:column;align-items:center;text-align:center;gap:22px;padding-top:clamp(28px,4cqi,56px)}
+.v2 h1{margin:0;font-size:clamp(44px,7cqi,100px);line-height:.96;font-weight:800;letter-spacing:-.05em;max-width:13ch}
+.v2 h1 span{color:var(--mist)}
+.v2 .lede{text-align:center}
+.v2 .ctas{justify-content:center}
+.v2-phone{margin-top:20px;position:relative;text-align:left}
+.v2-phone .phone{width:300px}
+.v2-glow{position:absolute;inset:-40px -80px;background:radial-gradient(closest-side,rgba(63,142,252,.18),rgba(63,142,252,0));pointer-events:none}
+/* posle heroa: prekidac */
+.v2-switch{padding-block:clamp(72px,10cqi,136px)}
+.sw{position:relative;margin-top:44px;display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:56px;align-items:center}
+.tabs{display:inline-flex;padding:5px;border-radius:999px;background:var(--surface);border:1px solid var(--line);gap:4px;margin-bottom:28px}
+.tabs label{min-height:44px;padding:0 20px;border-radius:999px;display:inline-flex;align-items:center;font-size:15px;font-weight:700;color:var(--mist);cursor:pointer}
+.sw-text h3{margin:0;font-size:clamp(26px,3.2cqi,40px);line-height:1.08;font-weight:800;letter-spacing:-.03em}
+.sw-text p{margin:14px 0 0;font-size:18px;line-height:1.6;color:var(--mist);max-width:46ch}
+.sw-text ul{list-style:none;margin:22px 0 0;padding:0;display:flex;flex-direction:column;gap:10px}
+.sw-text li{display:flex;gap:12px;align-items:baseline;font-size:16px;line-height:1.5}
+.sw-text li::before{content:"";width:8px;height:8px;border-radius:2px;background:var(--mist);flex:none;translate:0 -1px}
+.sw-a,.sw-b{transition:opacity 250ms var(--ease)}
+.sw-b{display:none}
+.sw-stage{position:relative;display:flex;justify-content:center}
+.sw-stage .scr-b{display:none}
+.rB:checked ~ .sw .tabs .lB,.rA:checked ~ .sw .tabs .lA{background:var(--porcelain);color:var(--prussian)}
+.rB:checked ~ .sw .sw-a{display:none}
+.rB:checked ~ .sw .sw-b{display:block}
+.rB:checked ~ .sw .scr-a{display:none}
+.rB:checked ~ .sw .scr-b{display:flex}
+.rA:focus-visible ~ .sw .tabs .lA,.rB:focus-visible ~ .sw .tabs .lB{outline:2px solid var(--porcelain);outline-offset:3px}
+@container v2 (max-width:1000px){.nav{display:none}}
+@container v2 (max-width:900px){
+  .v2-hero{min-height:0;padding-bottom:64px}
+  .v2-calm{background:linear-gradient(180deg,rgba(4,10,23,.82) 0%,rgba(4,10,23,.95) 18%,var(--night) 55%)}
+  .v2 .hide-m{display:none}
+  .sw{grid-template-columns:1fr;gap:36px}
+}
+@container v2 (max-width:560px){
+  .login,.long{display:none}.short{display:inline}
+  .ctas{flex-direction:column;align-self:stretch}.ctas .btn{width:100%}
+  .v2-phone .phone{width:280px}
+}
+
+/* ================= VARIJANTA 3: telefon koji ne staje ================= */
+.v3{container:v3/inline-size;background:var(--night);--mk-main:#FAFAF7;--mk-tail:#A8B4C8}
+.v3-hero{background:linear-gradient(180deg,var(--prussian) 0%,var(--night) 100%);overflow:hidden}
+.v3-grid{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:40px;align-items:center;padding-block:clamp(28px,4cqi,56px) clamp(80px,9cqi,128px)}
+.v3 h1{margin:18px 0 22px;font-size:clamp(46px,7cqi,100px);line-height:.95;font-weight:800;letter-spacing:-.05em}
+.v3 h1 span{color:var(--mist)}
+.v3-stage{position:relative;height:720px}
+.v3-stage .phone{position:absolute;left:50%;top:70px;translate:-50% 0;width:300px}
+.v3-stage .count{top:56px;left:calc(50% + 128px);z-index:5}
+.v3-stage .notif{z-index:4}
+/* posle heroa: dva telefona */
+.v3-after{padding-block:clamp(72px,10cqi,136px)}
+.two{display:grid;grid-template-columns:1fr 120px 1fr;align-items:center;gap:16px;margin-top:56px}
+.two figure{margin:0;display:flex;flex-direction:column;align-items:center;gap:18px}
+.two figcaption{font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--mist)}
+.two .old .phone{filter:saturate(.2) brightness(.72);scale:.92}
+.two .arrow{justify-self:center;width:64px;height:64px;border-radius:20px;background:var(--prussian);border:1px solid var(--line-strong);display:grid;place-items:center}
+.gains{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:64px}
+.gains div{border-top:2px solid var(--porcelain);padding-top:16px}
+.gains h3{margin:0;font-size:21px;font-weight:800}
+.gains p{margin:8px 0 0;font-size:16px;line-height:1.55;color:var(--mist)}
+@container v3 (max-width:1000px){.nav{display:none}}
+@container v3 (max-width:900px){
+  .v3-grid{grid-template-columns:1fr}
+  .v3-stage{height:690px}
+  .two{grid-template-columns:1fr;gap:28px}
+  .two .arrow{rotate:90deg}
+  .gains{grid-template-columns:1fr}
+}
+@container v3 (max-width:560px){
+  .login,.long{display:none}.short{display:inline}
+  .ctas{flex-direction:column}.ctas .btn{width:100%}
+  .v3-stage .count{left:calc(50% + 112px)}
+  .v3 .hide-s{display:none}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="pp" viewBox="0 0 54 90">
+    <g style="fill:var(--mk-tail,#A8B4C8)"><rect x="22" y="22" width="10" height="10" rx="2.5"/><rect x="22" y="58" width="10" height="10" rx="2.5"/><rect x="40" y="58" width="10" height="10" rx="2.5"/><rect x="22" y="76" width="10" height="10" rx="2.5"/><rect x="40" y="76" width="10" height="10" rx="2.5"/></g>
+    <g style="fill:var(--mk-main,#011638)"><rect x="1.5" y="1.5" width="15" height="15" rx="3.5"/><rect x="1.5" y="19.5" width="15" height="15" rx="3.5"/><rect x="1.5" y="37.5" width="15" height="15" rx="3.5"/><rect x="1.5" y="55.5" width="15" height="15" rx="3.5"/><rect x="1.5" y="73.5" width="15" height="15" rx="3.5"/><rect x="19.5" y="1.5" width="15" height="15" rx="3.5"/><rect x="37.5" y="1.5" width="15" height="15" rx="3.5"/><rect x="37.5" y="19.5" width="15" height="15" rx="3.5"/><rect x="19.5" y="37.5" width="15" height="15" rx="3.5"/><rect x="37.5" y="37.5" width="15" height="15" rx="3.5"/></g>
+  </symbol>
+</svg>
+
+<!-- ŠABLONI KOJI SE PONAVLJAJU -->
+<template id="tpl-slip">
+  <div class="slip"><h5>NALOG ZA UPLATU</h5><div class="g"><div>uplatilac<div class="bx t">Jelena Petrović<br>Beograd</div></div><div>iznos<div class="bx">=3.500,00</div></div><div>svrha uplate<div class="bx t">školarina za oktobar, Luka</div></div><div>šifra plaćanja<div class="bx">289</div></div><div>primalac<div class="bx t">Muzička škola Harmonija</div></div><div>poziv na broj<div class="bx">&nbsp;</div></div></div></div>
+</template>
+<template id="tpl-dir">
+  <div class="phone"><div class="screen"><div class="pb">
+    <div class="ptop"><span><svg class="mark-sm" aria-hidden="true"><use href="#pp"/></svg>PratiPlati</span><span class="pav">MS</span></div>
+    <div class="pnav"><span>Pregled</span><span>Grupe</span><span>Zahtevi 3</span><span class="on">Učenici</span></div>
+    <div class="ptitle"><b>Učenici</b><small>Oktobar 2026</small></div>
+    <div class="dl">
+      <div><span><b>Luka Petrović</b><small>Gitara I · 3.500 RSD</small></span><span class="badge b-pend">ČEKA POTVRDU</span></div>
+      <div><span><b>Mila Petrović</b><small>Klavir I · 4.000 RSD</small></span><span class="badge b-paid">PLAĆENO</span></div>
+      <div><span><b>Vuk Đorđević</b><small>Violina I · 4.500 RSD</small></span><span class="badge b-wait">ČEKA UPLATU</span></div>
+      <div><span><b>Sara Nikolić</b><small>Gitara II · 3.500 RSD</small></span><span class="badge b-paid">PLAĆENO</span></div>
+      <div><span><b>Andrej Lukić</b><small>Klavir I · 4.000 RSD</small></span><span class="badge b-rej">ODBIJENO</span></div>
+      <div><span><b>Nina Janković</b><small>Gitara I · 3.500 RSD</small></span><span class="badge b-paid">PLAĆENO</span></div>
+      <div><span><b>Teodor Savić</b><small>Violina I · 4.500 RSD</small></span><span class="badge b-pend">ČEKA POTVRDU</span></div>
+      <div><span><b>Iva Popović</b><small>Gitara II · 3.500 RSD</small></span><span class="badge b-paid">PLAĆENO</span></div>
+    </div>
+  </div></div></div>
+</template>
+<template id="tpl-inbox">
+  <div class="phone"><div class="screen"><div class="inbox">
+    <div class="ib-h"><b>Poruke</b><small>48 nepročitanih</small></div>
+    <div class="ib-s"></div>
+    <div class="ib"><i>KL</i><b>Roditelji, Klavir I</b><small>21:40</small><span>Ana: Da li je neko platio za oktobar?</span><em>23</em></div>
+    <div class="ib"><i>JP</i><b>Jelena Petrović</b><small>21:14</small><span>Platila sam još 3. oktobra, poslala sam sliku</span><em>2</em></div>
+    <div class="ib"><i>DR</i><b>Dragan, nastavnik</b><small>20:02</small><span>Prosleđujem 5 slika od roditelja</span><em>5</em></div>
+    <div class="ib"><i>MN</i><b>Marko Nikolić</b><small>19:30</small><span>Izvinite, koliko je za oktobar?</span><em>1</em></div>
+    <div class="ib"><i>PĐ</i><b>Petar Đorđević</b><small>juče</small><span>Fotografija</span><em>3</em></div>
+    <div class="ib"><i>GI</i><b>Roditelji, Gitara II</b><small>juče</small><span>Milan: Na koji račun se plaća?</span><em>12</em></div>
+    <div class="ib"><i>IM</i><b>Ivana Marković</b><small>juče</small><span>Poslala sam nastavniku sliku</span><em>1</em></div>
+    <div class="ib"><i>SN</i><b>Sara Nikolić</b><small>uto</small><span>Da li je stiglo?</span><em>1</em></div>
+  </div></div></div>
+</template>
+
+<nav class="bb" aria-label="Navigacija table"><b>PratiPlati: 3 hero koncepta</b><a href="#t1">1. Rame uz rame</a><a href="#t2">2. Zid haosa</a><a href="#t3">3. Telefon koji ne staje</a><a href="#tm">Sve tri na telefonu</a></nav>
+
+<!-- ======================================================= -->
+<div class="bl" id="t1"><h2>1. Rame uz rame: tamni haos levo, svetao red desno</h2><p>Hero je podeljen na dve polovine preko cele širine ekrana. Levo je gust, tamni, nemirni sloj poruka, slika uplatnica, tabela i ceduljica. Desno je svetla Porcelain površina sa jednom urednom listom statusa. Sekcija posle heroa poredi četiri konkretne situacije: danas i sa PratiPlati.</p></div>
+<div class="bf"><div class="v1" id="v1">
+  <div class="v1-hero">
+    <div class="wrap">
+      <header class="hd"><a class="logo" href="#v1"><svg class="mark" aria-hidden="true"><use href="#pp"/></svg>PratiPlati</a><nav class="nav" aria-label="Glavna navigacija"><a href="#v1">Kako radi</a><a href="#v1">Statusi</a><a href="#v1">Za direktore</a><a href="#v1">Pitanja</a></nav><div class="hd-right"><a class="login" href="#v1">Prijava</a><a class="btn btn-cta btn-sm" href="#v1"><span class="long">Zakažite razgovor</span><span class="short">Razgovor</span></a></div></header>
+      <div class="v1-top">
+        <div><p class="kicker">Evidencija mesečnih uplata za škole i organizacije</p><h1>Dosta vam je haosa <span>sa uplatama?</span></h1></div>
+        <div><p class="lede">Dokaz o uplati stiže direktno sa telefona. Vi ga potvrdite i na jednom ekranu vidite ko je platio, a ko nije.</p><div class="ctas" style="margin-top:24px"><a class="btn btn-cta" href="#v1">Zakažite razgovor</a><a class="btn btn-line" href="#v1">Pogledajte kako radi</a></div></div>
+      </div>
+    </div>
+    <div class="v1-stagewrap" role="img" aria-label="Levo, danas: gomila poruka roditelja, slike uplatnica, tabela sa upitnicima i ceduljice. Desno, sa PratiPlati: uredna lista učenika sa statusima uplata.">
+      <div class="v1-stage">
+        <div class="chaos v1-chaos">
+          <div class="big-tag dark"><p class="bt">Danas</p><p class="bs">Poruke, slike uplatnica, tabele i ista pitanja.</p></div>
+          <div class="fr far" style="top:240px;left:58%;rotate:8deg"><div class="sheet"><span class="h">Ime</span><span class="h">Sep</span><span class="h">Napomena</span><span>Iva P.</span><span class="x">da</span><span>keš</span><span>Nina J.</span><span class="q">?</span><span>?</span></div></div>
+          <div class="fr far hide-s" style="top:560px;left:62%;rotate:-6deg"><div class="bub"><b>Roditelji, Gitara II</b>Na koji račun se plaća?<small>juče</small></div></div>
+          <div class="fr bub drift" style="top:246px;left:6%;rotate:-4deg;--dx:4px;--dy:-6px"><b>Jelena Petrović</b>Platila sam još 3. oktobra, poslala sam vam sliku.<small>21:14</small></div>
+          <div class="fr drift b" style="top:320px;left:44%;rotate:9deg;--dx:-5px;--dy:7px"><div data-tpl="tpl-slip"></div></div>
+          <div class="fr bub drift c" style="top:376px;left:3%;rotate:3deg;--dx:6px;--dy:4px"><b>Dragan, nastavnik</b>Prosleđujem slike od roditelja<span class="pic"></span><small>20:02</small></div>
+          <div class="fr bub me drift e hide-s" style="top:470px;left:30%;rotate:-2deg;--dx:-4px;--dy:-5px">Možete li ponovo da pošaljete sliku? Ne vidi se iznos.<small>Vi, 22:05</small></div>
+          <div class="fr drift b" style="top:580px;left:6%;rotate:-5deg;--dx:5px;--dy:-4px"><div class="sheet"><span class="h">Ime</span><span class="h">Okt</span><span class="h">Napomena</span><span>Luka P.</span><span class="q">?</span><span>poslala sliku?</span><span>Vuk Đ.</span><span class="q">?</span><span>pitati Dragana</span><span>Sara N.</span><span>da?</span><span>proveriti</span><span>Mila P.</span><span>da</span><span></span></div></div>
+          <div class="fr sticky drift c" style="top:640px;left:46%;rotate:7deg;--dx:-3px;--dy:6px">Vuk ??<br>Luka platio? pitati</div>
+          <div class="fr bub drift hide-s" style="top:198px;left:40%;rotate:5deg;--dx:-6px;--dy:5px"><b>Marko Nikolić</b>Izvinite, koliko je za oktobar?<small>19:30</small></div>
+          <div class="fr mail drift e" style="top:730px;left:10%;rotate:2deg;--dx:4px;--dy:-3px"><i>DR</i><b>Fwd: Fwd: uplate za oktobar (5)</b><span>Dragan Ristić · 5 priloga</span></div>
+        </div>
+        <div class="v1-calm">
+          <div class="big-tag light"><p class="bt">Sa PratiPlati</p><p class="bs">Jedna lista. Svaki član ima svoj status.</p></div>
+          <div class="ledger">
+            <div class="ledger-head"><b>Gitara I</b><span>Oktobar 2026 · rok 31. 10.</span></div>
+            <div class="lrow"><b>Luka Petrović</b><small>3.500 RSD</small><span class="badge b-pend">ČEKA POTVRDU</span></div>
+            <div class="lrow"><b>Nina Janković</b><small>3.500 RSD</small><span class="badge b-paid">PLAĆENO</span></div>
+            <div class="lrow"><b>Vuk Đorđević</b><small>3.500 RSD</small><span class="badge b-wait">ČEKA UPLATU</span></div>
+            <div class="lrow"><b>Andrej Lukić</b><small>3.500 RSD</small><span class="badge b-rej">ODBIJENO</span></div>
+            <div class="lrow"><b>Sara Nikolić</b><small>3.500 RSD</small><span class="badge b-paid">PLAĆENO</span></div>
+            <div class="lrow"><b>Iva Popović</b><small>3.500 RSD</small><span class="badge b-paid">PLAĆENO</span></div>
+          </div>
+        </div>
+      </div>
+      <span class="v1-seam"><svg class="mark" aria-hidden="true"><use href="#pp"/></svg></span>
+    </div>
+  </div>
+
+  <section class="v1-diff" aria-labelledby="v1-d">
+    <div class="wrap">
+      <h2 class="h2" id="v1-d">Šta se menja kada dokazi imaju jedno mesto.</h2>
+      <div class="diff">
+        <div class="diff-head"><span>Danas</span><span></span><span>Sa PratiPlati</span></div>
+        <div class="diff-row">
+          <div class="diff-cell old"><div class="mini"><div class="fr bub" style="rotate:-2deg"><b>Jelena Petrović</b>Evo uplatnice za Luku<span class="pic" style="width:120px;height:70px"></span></div></div><p>Slika uplatnice negde u porukama.</p></div>
+          <span class="diff-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#FAFAF7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          <div class="diff-cell"><div class="mini"><div class="mini-card"><div class="row" style="justify-content:flex-start;gap:12px;border-bottom:0"><span class="thumb"></span><span><b>Luka Petrović</b><br><small style="color:var(--app-muted)">Gitara I · Oktobar 2026</small><br><span class="badge b-pend" style="margin-top:6px">ČEKA POTVRDU</span></span></div></div></div><p>Dokaz je vezan za učenika i mesec.</p></div>
+        </div>
+        <div class="diff-row">
+          <div class="diff-cell old"><div class="mini" style="flex-direction:column;align-items:flex-start;gap:8px"><div class="fr bub" style="rotate:1deg;padding:8px 12px">Da li je Luka platio?</div><div class="fr bub me" style="rotate:-1deg;align-self:flex-end;padding:8px 12px">Ne znam, proveriću.</div></div><p>Svaki mesec isto pitanje.</p></div>
+          <span class="diff-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#FAFAF7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          <div class="diff-cell"><div class="mini"><div class="mini-card"><div class="row"><b>Luka</b><span class="badge b-pend">ČEKA POTVRDU</span></div><div class="row"><b>Mila</b><span class="badge b-paid">PLAĆENO</span></div><div class="row"><b>Vuk</b><span class="badge b-wait">ČEKA UPLATU</span></div></div></div><p>Svaki član ima jasan status.</p></div>
+        </div>
+        <div class="diff-row">
+          <div class="diff-cell old"><div class="mini"><div class="fr mail" style="rotate:-1deg;width:100%;max-width:280px"><i>DR</i><b>Fwd: 5 slika od roditelja</b><span>sa privatnog telefona nastavnika</span></div></div><p>Dokazi kod nastavnika, na privatnom telefonu.</p></div>
+          <span class="diff-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#FAFAF7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          <div class="diff-cell"><div class="mini"><div class="mini-card lock"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#011638" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4.5" y="10.5" width="15" height="10" rx="2.5"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg><span><b>Pogledaj dokaz</b><br><small style="color:var(--app-muted)">otvaraju samo direktor i nastavnik grupe</small></span></div></div><p>Dokazi su privatni, na jednom mestu.</p></div>
+        </div>
+        <div class="diff-row">
+          <div class="diff-cell old"><div class="mini"><div class="fr sheet" style="rotate:1.5deg;width:100%;max-width:270px"><span class="h">Ime</span><span class="h">Okt</span><span class="h">Napomena</span><span>Luka P.</span><span class="q">?</span><span>poslala sliku?</span><span>Vuk Đ.</span><span class="q">?</span><span>pitati Dragana</span></div></div><p>Tabela se sklapa ručno, na kraju meseca.</p></div>
+          <span class="diff-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#FAFAF7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          <div class="diff-cell"><div class="mini"><div class="tile" style="width:100%;max-width:240px;border:1px solid var(--line-strong)">Uplaćeno ovog meseca<b>96 <span>/ 128</span></b></div></div><p>Pregled meseca je već tu.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div></div>
+
+<!-- ======================================================= -->
+<div class="bl" id="t2"><h2>2. Zid haosa: ceo ekran je haos, red je u sredini</h2><p>Pozadina heroa je gust zid poruka, uplatnica i tabela koji se blago pomera. Sredina je očišćena: tu stoje naslov i jedan miran telefon sa listom statusa. Sekcija posle heroa ima prekidač „Danas | Sa PratiPlati“ koji na istom telefonu menja prepunu prepisku u PratiPlati.</p></div>
+<div class="bf"><div class="v2" id="v2">
+  <div class="v2-hero">
+    <div class="v2-wall chaos" aria-hidden="true">
+      <div class="fr bub drift" style="top:120px;left:2%;rotate:-6deg"><b>Jelena Petrović</b>Platila sam još 3. oktobra, poslala sam vam sliku.<small>21:14</small></div>
+      <div class="fr drift b" style="top:260px;left:4%;rotate:7deg"><div data-tpl="tpl-slip"></div></div>
+      <div class="fr sticky drift c hide-m" style="top:470px;left:16%;rotate:-8deg">Vuk ??<br>Luka platio?</div>
+      <div class="fr drift e" style="top:560px;left:1%;rotate:-3deg"><div class="sheet"><span class="h">Ime</span><span class="h">Okt</span><span class="h">Napomena</span><span>Luka P.</span><span class="q">?</span><span>poslala sliku?</span><span>Vuk Đ.</span><span class="q">?</span><span>pitati Dragana</span><span>Sara N.</span><span>da?</span><span>proveriti</span></div></div>
+      <div class="fr bub far hide-m" style="top:760px;left:6%;rotate:5deg"><b>Roditelji, Klavir I</b>Da li je neko platio za oktobar?<small>21:40</small></div>
+      <div class="fr bub me drift hide-m" style="top:880px;left:18%;rotate:-4deg">Proveriću pa vam javim.<small>Vi</small></div>
+      <div class="fr bub drift b" style="top:100px;right:3%;rotate:5deg"><b>Dragan, nastavnik</b>Prosleđujem 5 slika od roditelja<span class="pic"></span><small>20:02</small></div>
+      <div class="fr drift c hide-m" style="top:380px;right:2%;rotate:-7deg"><div data-tpl="tpl-slip"></div></div>
+      <div class="fr bub drift e" style="top:560px;right:12%;rotate:4deg"><b>Marko Nikolić</b>Izvinite, koliko je za oktobar?<small>19:30</small></div>
+      <div class="fr mail drift hide-m" style="top:700px;right:2%;rotate:3deg"><i>DR</i><b>Fwd: Fwd: uplate (5)</b><span>Dragan Ristić · 5 priloga</span></div>
+      <div class="fr sticky far hide-m" style="top:860px;right:20%;rotate:6deg">Gitara II<br>ko nije platio???</div>
+      <div class="fr bub far hide-m" style="top:900px;right:2%;rotate:-3deg"><b>Ana Savić</b>Da li je stiglo?<small>uto</small></div>
+    </div>
+    <div class="v2-calm"></div>
+    <div class="wrap" style="position:relative;z-index:4">
+      <header class="hd"><a class="logo" href="#v2"><svg class="mark" aria-hidden="true"><use href="#pp"/></svg>PratiPlati</a><nav class="nav" aria-label="Glavna navigacija"><a href="#v2">Kako radi</a><a href="#v2">Statusi</a><a href="#v2">Za direktore</a><a href="#v2">Pitanja</a></nav><div class="hd-right"><a class="login" href="#v2">Prijava</a><a class="btn btn-cta btn-sm" href="#v2"><span class="long">Zakažite razgovor</span><span class="short">Razgovor</span></a></div></header>
+    </div>
+    <div class="v2-center wrap">
+      <p class="kicker">Evidencija mesečnih uplata za škole i organizacije</p>
+      <h1>Dosta vam je haosa <span>sa uplatama?</span></h1>
+      <p class="lede">Dokaz o uplati stiže direktno sa telefona. Vi ga potvrdite i na jednom ekranu vidite ko je platio, a ko nije.</p>
+      <div class="ctas"><a class="btn btn-cta" href="#v2">Zakažite razgovor</a><a class="btn btn-line" href="#v2">Pogledajte kako radi</a></div>
+      <div class="v2-phone" role="img" aria-label="Telefon sa listom učenika za oktobar i statusom uplate za svakog."><div class="v2-glow"></div><div data-tpl="tpl-dir"></div></div>
+    </div>
+  </div>
+
+  <section class="v2-switch" aria-labelledby="v2-s">
+    <div class="wrap">
+      <input class="sr rA" type="radio" name="v2s" id="v2-a" checked>
+      <input class="sr rB" type="radio" name="v2s" id="v2-b">
+      <h2 class="h2" id="v2-s">Isti mesec. Dva načina.</h2>
+      <div class="sw">
+        <div class="sw-text">
+          <div class="tabs"><label class="lA" for="v2-a">Danas</label><label class="lB" for="v2-b">Sa PratiPlati</label></div>
+          <div class="sw-a">
+            <h3>48 nepročitanih poruka i nijedan siguran odgovor.</h3>
+            <p>Dokazi stižu u poruke, mejlove i kod nastavnika. Vi ih tražite i sklapate ručno.</p>
+            <ul><li>Slike uplatnica razbacane po razgovorima</li><li>Isto pitanje u grupi svaki mesec</li><li>Tabela koja nikad nije do kraja tačna</li></ul>
+          </div>
+          <div class="sw-b">
+            <h3>Jedna lista. Svaki član ima svoj status.</h3>
+            <p>Dokaz stiže na jedno mesto, vezan za učenika i mesec. Vi ga potvrdite i odmah vidite ko je platio.</p>
+            <ul><li>Dokazi na jednom mestu, privatni</li><li>Pet jasnih stanja, bez nagađanja</li><li>Pregled meseca bez ručne tabele</li></ul>
+          </div>
+        </div>
+        <div class="sw-stage" role="img" aria-label="Isti telefon: danas prepun poruka, sa PratiPlati uredna lista statusa.">
+          <div class="scr-a" data-tpl="tpl-inbox"></div>
+          <div class="scr-b" data-tpl="tpl-dir"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div></div>
+
+<!-- ======================================================= -->
+<div class="bl" id="t3"><h2>3. Telefon koji ne staje</h2><p>Haos je tamo gde direktor zaista živi: u telefonu. Desno je prepisan pretrpan inboks sa 48 nepročitanih, a obaveštenja i slike uplatnica se prelivaju preko ivica. Sekcija posle heroa stavlja isti telefon dva puta jedan pored drugog: danas, ugašen, i sa PratiPlati, jasan.</p></div>
+<div class="bf"><div class="v3" id="v3">
+  <div class="v3-hero">
+    <div class="wrap">
+      <header class="hd"><a class="logo" href="#v3"><svg class="mark" aria-hidden="true"><use href="#pp"/></svg>PratiPlati</a><nav class="nav" aria-label="Glavna navigacija"><a href="#v3">Kako radi</a><a href="#v3">Statusi</a><a href="#v3">Za direktore</a><a href="#v3">Pitanja</a></nav><div class="hd-right"><a class="login" href="#v3">Prijava</a><a class="btn btn-cta btn-sm" href="#v3"><span class="long">Zakažite razgovor</span><span class="short">Razgovor</span></a></div></header>
+      <div class="v3-grid">
+        <div>
+          <p class="kicker">Evidencija mesečnih uplata za škole i organizacije</p>
+          <h1>Dosta vam je haosa <span>sa uplatama?</span></h1>
+          <p class="lede">Dokaz o uplati stiže direktno sa telefona. Vi ga potvrdite i na jednom ekranu vidite ko je platio, a ko nije.</p>
+          <div class="ctas" style="margin-top:28px"><a class="btn btn-cta" href="#v3">Zakažite razgovor</a><a class="btn btn-line" href="#v3">Pogledajte kako radi</a></div>
+          <p class="note">Uplate i dalje stižu direktno na račun vaše organizacije. PratiPlati vodi evidenciju.</p>
+        </div>
+        <div class="v3-stage chaos" style="overflow:visible" role="img" aria-label="Telefon sa 48 nepročitanih poruka o uplatama, obaveštenja i slike uplatnica koje se prelivaju preko ivica.">
+          <div class="fr far hide-s" style="top:250px;left:-4%;rotate:-9deg"><div data-tpl="tpl-slip"></div></div>
+          <div class="fr far hide-s" style="top:520px;right:-6%;rotate:8deg"><div class="sheet"><span class="h">Ime</span><span class="h">Okt</span><span class="h">Napomena</span><span>Luka P.</span><span class="q">?</span><span>poslala sliku?</span><span>Vuk Đ.</span><span class="q">?</span><span>pitati Dragana</span></div></div>
+          <div data-tpl="tpl-inbox"></div>
+          <span class="count">48</span>
+          <div class="fr notif drift" style="top:0;left:calc(50% - 230px);rotate:-3deg;--dx:4px;--dy:-4px"><i></i><b>Roditelji, Klavir I</b><small>sada</small><span>23 nove poruke: da li je neko platio za oktobar?</span></div>
+          <div class="fr notif drift b" style="top:180px;left:calc(50% + 60px);rotate:4deg;--dx:-5px;--dy:5px"><i></i><b>Dragan, nastavnik</b><small>2 min</small><span>Prosleđujem 5 slika od roditelja</span></div>
+          <div class="fr notif drift c hide-s" style="top:360px;left:calc(50% - 300px);rotate:-5deg;--dx:5px;--dy:3px"><i></i><b>Mejl</b><small>8 min</small><span>Re: Re: Fwd: uplata za oktobar (4)</span></div>
+          <div class="fr drift e" style="top:520px;left:calc(50% + 70px);rotate:7deg;--dx:-4px;--dy:-5px"><div data-tpl="tpl-slip"></div></div>
+          <div class="fr sticky drift b" style="top:600px;left:calc(50% - 250px);rotate:-6deg;--dx:4px;--dy:-3px">Vuk ??<br>Luka platio?</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="v3-after" aria-labelledby="v3-a">
+    <div class="wrap">
+      <h2 class="h2" id="v3-a">Isti telefon. Drugačiji mesec.</h2>
+      <div class="two">
+        <figure class="old"><div data-tpl="tpl-inbox"></div><figcaption>Danas</figcaption></figure>
+        <span class="arrow" aria-hidden="true"><svg class="mark" aria-hidden="true"><use href="#pp"/></svg></span>
+        <figure><div data-tpl="tpl-dir"></div><figcaption>Sa PratiPlati</figcaption></figure>
+      </div>
+      <div class="gains">
+        <div><h3>Dokazi na jednom mestu</h3><p>Ne u porukama, mejlovima i telefonima nastavnika.</p></div>
+        <div><h3>Status za svakog člana</h3><p>Plaćeno, čeka potvrdu ili čeka uplatu. Bez nagađanja.</p></div>
+        <div><h3>Vi samo potvrđujete</h3><p>Pregledate dokaz i jednim dugmetom ga prihvatite ili odbijete.</p></div>
+      </div>
+    </div>
+  </section>
+</div></div>
+
+<!-- ======================================================= -->
+<div class="bl" id="tm"><h2>Sve tri varijante na telefonu, 390 px</h2><p>Skroluj unutar svakog telefona.</p></div>
+<div class="devs">
+  <figure><div class="dev"><div class="dev-scroll" data-clone="v1"></div></div><figcaption>1. Rame uz rame</figcaption></figure>
+  <figure><div class="dev"><div class="dev-scroll" data-clone="v2"></div></div><figcaption>2. Zid haosa</figcaption></figure>
+  <figure><div class="dev"><div class="dev-scroll" data-clone="v3"></div></div><figcaption>3. Telefon koji ne staje</figcaption></figure>
+</div>
+
+<script>
+(function(){
+  document.querySelectorAll('[data-tpl]').forEach(function(s){var t=document.getElementById(s.getAttribute('data-tpl'));if(t)s.appendChild(t.content.cloneNode(true));});
+  document.querySelectorAll('[data-clone]').forEach(function(slot,i){
+    var src=document.getElementById(slot.getAttribute('data-clone')); if(!src) return;
+    var c=src.cloneNode(true), sfx='-m'+i;
+    c.removeAttribute('id');
+    c.querySelectorAll('[id]').forEach(function(e){e.id=e.id+sfx});
+    c.querySelectorAll('label[for]').forEach(function(e){e.setAttribute('for',e.getAttribute('for')+sfx)});
+    c.querySelectorAll('input[name]').forEach(function(e){e.name=e.name+sfx});
+    c.querySelectorAll('[aria-labelledby]').forEach(function(e){e.setAttribute('aria-labelledby',e.getAttribute('aria-labelledby')+sfx)});
+    c.querySelectorAll('a[href^="#"]').forEach(function(a){a.setAttribute('href','#tm')});
+    slot.appendChild(c);
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+# zavisnosti
+/node_modules
+
+# Next.js
+/.next/
+/out/
+next-env.d.ts
+*.tsbuildinfo
+
+# okruzenje (tajni kljucevi nikad u git)
+.env*
+!.env.example
+
+# sistem
+.DS_Store
+Thumbs.db
+npm-debug.log*
+
+# Vercel
+.vercel
+
+# isti video je u public/media, original ostaje samo lokalno
+materijali/video/*.mp4

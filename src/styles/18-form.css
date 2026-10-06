@@ -1,0 +1,42 @@
+/* FORMA */
+.offer-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:64px;align-items:start}
+.offer-side{position:sticky;top:40px}
+.assure{list-style:none;margin:32px 0 0;padding:0;display:flex;flex-direction:column;gap:14px}
+.assure li{display:flex;align-items:center;gap:12px;font-weight:700}
+.assure .ico{width:22px;height:22px}
+.form{background:var(--paper);border:1px solid var(--line-l);border-radius:32px;padding:clamp(24px,3.4vw,44px);box-shadow:0 50px 100px -60px rgba(1,22,56,.35);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 16px}
+.fld{display:flex;flex-direction:column;gap:7px}
+.fld.full{grid-column:1/-1}
+.fld label{font-size:14px;font-weight:800}
+.fld label span{color:var(--muted);font-weight:600}
+.fld input,.fld select,.fld textarea{width:100%;min-height:52px;padding:0 16px;border:1px solid #d7dbe2;border-radius:14px;background:var(--porcelain);font:inherit;font-size:16px;color:var(--ink);transition:border-color 160ms,box-shadow 160ms}
+.fld textarea{min-height:120px;padding:14px 16px;resize:vertical}
+.fld input:focus,.fld select:focus,.fld textarea:focus{outline:none;border-color:var(--prussian);box-shadow:0 0 0 4px rgba(63,142,252,.18)}
+.fld input[aria-invalid="true"]{border-color:#b4553e}
+.err{font-size:13px;color:#8a3a26;font-weight:700;min-height:0}
+.err:empty{display:none}
+.fld-msg{font-size:13px;font-weight:700;color:#b4553e}
+.fld-msg:empty{display:none}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.form .btn{grid-column:1/-1;width:100%;min-height:58px;font-size:17px}
+.form-note{grid-column:1/-1;margin:0;font-size:14px;color:var(--muted);text-align:center}
+.form-ok{grid-column:1/-1;display:none;align-items:center;gap:14px;padding:18px;border-radius:18px;background:#eff8f1;color:#24552e;font-weight:700}
+.form.sent .fld,.form.sent .btn,.form.sent .form-note{display:none}
+.form.sent .form-ok{display:flex}
+/* forma u tamnom rezimu */
+.offer-sec{background:radial-gradient(80% 60% at 85% 10%,#0b2350 0%,rgba(11,35,80,0) 70%),linear-gradient(180deg,var(--prussian) 0%,var(--night) 100%);border-bottom:1px solid var(--line-d)}
+.offer-sec .assure li{color:var(--porcelain)}
+.offer-sec .assure .ico{color:var(--mist)}
+.offer-sec .form{background:linear-gradient(180deg,rgba(250,250,247,.06),rgba(250,250,247,.025));border:1px solid rgba(168,180,200,.18);box-shadow:inset 0 1px 0 rgba(250,250,247,.06),0 60px 120px -60px rgba(0,0,0,.9)}
+.offer-sec .fld label{color:var(--porcelain)}
+.offer-sec .fld label span{color:var(--mist)}
+.offer-sec .fld input,.offer-sec .fld select,.offer-sec .fld textarea{background:rgba(4,10,23,.55);border-color:rgba(168,180,200,.26);color:var(--porcelain);color-scheme:dark}
+.offer-sec .fld select option{background:#0c1a36;color:var(--porcelain)}
+.fld select{-webkit-appearance:none;appearance:none;cursor:pointer;padding-right:56px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23566175' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 20px center;background-size:16px 16px}
+.offer-sec .fld select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23a8b4c8' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 20px center;background-size:16px 16px}
+.offer-sec .fld input:hover,.offer-sec .fld select:hover,.offer-sec .fld textarea:hover{border-color:rgba(168,180,200,.45)}
+.offer-sec .fld input:focus,.offer-sec .fld select:focus,.offer-sec .fld textarea:focus{border-color:var(--mist);box-shadow:0 0 0 4px rgba(63,142,252,.22)}
+.offer-sec .fld input:-webkit-autofill{-webkit-box-shadow:0 0 0 100px #0a1530 inset;-webkit-text-fill-color:var(--porcelain)}
+.offer-sec .fld input[aria-invalid="true"],.offer-sec .fld select[aria-invalid="true"]{border-color:#e08a80}
+.offer-sec .err,.offer-sec .fld-msg{color:#f0a39b}
+.offer-sec .form-note{color:var(--mist)}

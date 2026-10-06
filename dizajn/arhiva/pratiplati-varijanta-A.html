@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="sr-Latn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PratiPlati varijanta A</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ================= TOKENI ================= */
+:root{
+  --prussian:#011638; --night:#040a17; --porcelain:#fafaf7; --mist:#a8b4c8; --cta:#3f8efc; --cta-hover:#5b9ffd;
+  --line:rgba(168,180,200,.16); --line-strong:rgba(168,180,200,.32);
+  --app-border:#e3e2dc; --app-border-strong:#d5d4cd; --app-soft:#f2f1ec; --app-muted:#5c5b54; --app-row:#ecebe5; --app-primary-soft:#dbe9fe;
+  --font:'Manrope','Helvetica Neue',Arial,sans-serif; --ease:cubic-bezier(.2,.7,.2,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#d9d9d5;font-family:var(--font);color:var(--porcelain)}
+img,svg{display:block}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--porcelain);outline-offset:3px;border-radius:6px}
+.on-light :focus-visible{outline-color:var(--prussian)}
+
+/* ================= OKVIR TABLE ================= */
+.bb{position:sticky;top:0;z-index:60;display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;padding:10px 20px;background:#1b1b19;color:#ececea;font-size:13px}
+.bb b{margin-right:6px}
+.bb a{color:#ececea;text-decoration:none;padding:6px 10px;border-radius:8px;background:#333331}
+.bl{max-width:1440px;margin:56px auto 14px;padding:0 20px}
+.bl h2{margin:0;font-size:22px;font-weight:800;color:#1b1b19}
+.bl p{margin:6px 0 0;font-size:14px;color:#55554f;line-height:1.55;max-width:100ch}
+.bf{max-width:1440px;margin:0 auto;overflow:hidden;box-shadow:0 20px 50px -20px rgba(0,0,0,.4)}
+.devs{overflow-x:auto;display:flex;flex-wrap:wrap;gap:28px 36px;justify-content:center;align-items:flex-start;padding:0 20px 40px}
+.devs figure{margin:0;display:flex;flex-direction:column;align-items:center;gap:10px}
+.devs figcaption{font-size:13px;color:#55554f;font-weight:600}
+.dev{width:390px;height:844px;border-radius:46px;border:11px solid #111;background:#111;overflow:hidden;box-shadow:0 30px 60px -20px rgba(0,0,0,.5)}
+.tab{width:768px;height:1024px;zoom:.62;border-radius:40px;border:16px solid #111;background:#111;overflow:hidden;box-shadow:0 30px 60px -20px rgba(0,0,0,.5)}
+.dev-scroll{height:100%;overflow-y:auto;border-radius:35px;background:var(--night)}
+.tab .dev-scroll{border-radius:24px}
+
+/* ================= ZAJEDNIČKO ================= */
+.var{container:var/inline-size;background:var(--night);--mk-main:#FAFAF7;--mk-tail:#A8B4C8}
+.mark{width:17px;height:28px;flex:none}
+.mark-sm{width:13px;height:22px;flex:none}
+.wrap{max-width:1240px;margin:0 auto;padding-inline:clamp(16px,4cqi,40px)}
+.hd{position:relative;z-index:6;display:flex;align-items:center;gap:32px;padding-block:20px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:18px;letter-spacing:-.02em;text-decoration:none;min-height:44px}
+.nav{display:flex;gap:2px}
+.nav a{color:var(--mist);text-decoration:none;font-size:15px;font-weight:500;padding:10px 12px;border-radius:8px}
+.hd-right{margin-left:auto;display:flex;align-items:center;gap:6px}
+.login{color:var(--mist);text-decoration:none;font-size:14px;font-weight:600;padding:0 12px;min-height:44px;display:inline-flex;align-items:center}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 24px;border-radius:14px;font:700 16px/1 var(--font);text-decoration:none;border:1px solid transparent;transition:background-color 150ms var(--ease),border-color 150ms var(--ease)}
+.btn-cta{background:var(--cta);color:var(--prussian)}
+.btn-cta:hover{background:var(--cta-hover)}
+.btn-line{border-color:var(--line-strong);color:var(--porcelain);font-weight:600}
+.btn-line:hover{border-color:var(--porcelain)}
+.btn-sm{min-height:44px;padding:0 18px;font-size:15px}
+.short{display:none}
+.kicker{display:flex;align-items:center;gap:12px;margin:0;font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--mist)}
+.kicker::before{content:"";width:28px;height:2px;background:var(--mist);flex:none}
+.h1{margin:0;font-size:clamp(42px,7cqi,104px);line-height:.96;font-weight:800;letter-spacing:-.05em;text-wrap:balance}
+.h1 span{color:var(--mist)}
+.lede{margin:0;font-size:clamp(17px,1.7cqi,21px);line-height:1.55;color:var(--mist);max-width:44ch}
+.ctas{display:flex;flex-wrap:wrap;gap:12px}
+.big .bt{margin:0;font-size:clamp(46px,6cqi,96px);line-height:.95;font-weight:800;letter-spacing:-.045em}
+.big .bs{margin:12px 0 0;font-size:clamp(16px,1.5cqi,19px);line-height:1.45;font-weight:600;max-width:30ch}
+.big.dark .bt{color:var(--porcelain);text-shadow:0 4px 30px rgba(4,10,23,.9)}
+.big.dark .bs{color:var(--mist)}
+.big.light .bt{color:var(--prussian)}
+.big.light .bs{color:var(--app-muted)}
+.seam{position:absolute;z-index:7;width:64px;height:64px;border-radius:20px;background:var(--prussian);display:grid;place-items:center;box-shadow:0 0 0 8px var(--porcelain),0 20px 40px -10px rgba(0,0,0,.6)}
+.seam .mark{width:20px;height:33px}
+.vign{position:absolute;inset:0;background:radial-gradient(120% 90% at 50% 40%,rgba(4,10,23,0) 55%,rgba(4,10,23,.75) 100%);pointer-events:none}
+
+/* ================= FRAGMENTI HAOSA ================= */
+.fr{position:absolute;box-shadow:0 22px 46px -18px rgba(0,0,0,.75)}
+.d1{filter:blur(.5px);opacity:.94;scale:1.04;z-index:3}
+.d2{filter:blur(2.4px);opacity:.62;scale:.9;z-index:2}
+.d3{filter:blur(5px);opacity:.36;scale:.78;z-index:1}
+.bub{width:max-content;max-width:250px;background:#e9e8e3;color:var(--prussian);font-size:14px;line-height:1.38;padding:10px 13px 9px;border-radius:18px 18px 18px 5px}
+.bub b{display:block;font-size:11.5px;color:#55534c;margin-bottom:2px}
+.bub small{display:block;margin-top:4px;font-size:10.5px;color:#7a7870;text-align:right}
+.bub.me{background:#c9d6ea;border-radius:18px 18px 5px 18px}
+.pic{display:block;width:150px;height:92px;margin:4px 0 2px;border-radius:10px;background:repeating-linear-gradient(0deg,#f6f5f0 0 7px,#d9d6cc 7px 8px);border:1px solid #cfccc2}
+.slip{width:230px;background:#fdfcf7;color:#3a3a35;border-radius:3px;padding:10px 12px 12px;font-size:8.5px;line-height:1.2;border:1px solid #e2dfd5}
+.slip h5{margin:0 0 7px;font-size:10px;font-weight:800;letter-spacing:.12em;color:#2b2b27}
+.slip .g{display:grid;grid-template-columns:1.4fr 1fr;gap:6px 10px}
+.slip .bx{border:1px solid #bdb9ad;border-radius:2px;min-height:18px;padding:3px 5px;font-size:9px;color:#2b2b27;margin-top:2px}
+.slip .bx.t{min-height:30px}
+.sheet{width:260px;display:grid;grid-template-columns:1.15fr .5fr 1.5fr;background:#fff;color:var(--prussian);border-radius:6px;overflow:hidden;font-size:12px;border:1px solid #d7d5cd}
+.sheet span{padding:5px 7px;border-right:1px solid #e6e4dd;border-bottom:1px solid #e6e4dd;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sheet span:nth-child(3n){border-right:0}
+.sheet .h{background:#eceee8;font-weight:700;font-size:10.5px;color:#5c5b54}
+.sheet .q{font-weight:800;background:#fff2a8}
+.mail{width:260px;background:#fff;color:var(--prussian);border-radius:10px;padding:10px 12px;font-size:12.5px;display:grid;grid-template-columns:auto 1fr;gap:2px 10px;align-items:center}
+.mail i{grid-row:span 2;width:30px;height:30px;border-radius:999px;background:#e3e2dc;display:grid;place-items:center;font-style:normal;font-size:11px;font-weight:800;color:#5c5b54}
+.mail span{font-size:11.5px;color:#5c5b54;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sticky{width:150px;background:#f3e58a;color:#3d3700;font-weight:700;font-size:14px;line-height:1.3;padding:12px 12px 16px}
+@media (prefers-reduced-motion:no-preference){
+  .drift{animation:drift var(--d,7s) ease-in-out infinite alternate}
+  .drift.b{--d:9s;animation-delay:-3s}.drift.c{--d:6s;animation-delay:-1s}.drift.e{--d:11s;animation-delay:-5s}
+}
+@keyframes drift{from{translate:0 0}to{translate:6px -8px}}
+
+/* ================= APP UI ================= */
+.badge{display:inline-flex;align-items:center;gap:6px;padding:4px 9px;border-radius:999px;font-size:10.5px;font-weight:700;letter-spacing:.05em;border:1px solid;white-space:nowrap;line-height:1.3}
+.badge::before{content:"";width:7px;height:7px;border-radius:999px;box-sizing:border-box;flex:none}
+.b-paid{background:#eff8f1;color:#24552e;border-color:#c9e3cf}.b-paid::before{background:#69a875}
+.b-pend{background:#fffbea;color:#5f5000;border-color:#f0dd8c}.b-pend::before{border:2px solid #e6c84f}
+.b-wait{background:var(--app-soft);color:var(--app-muted);border-color:var(--app-border)}.b-wait::before{border:1.5px solid #a8a79e}
+.b-rej{background:#fff1f0;color:#7a2924;border-color:#f1c5c1}.b-rej::before{background:#d97872}
+.ledger{width:min(500px,100%);background:#fff;color:var(--prussian);border-radius:20px;padding:18px 20px;border:1px solid var(--app-border-strong);box-shadow:0 40px 80px -40px rgba(1,22,56,.45)}
+.ledger-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;padding-bottom:12px;border-bottom:1px solid var(--app-row)}
+.ledger-head b{font-size:17px;font-weight:800}
+.ledger-head span{font-size:12.5px;color:var(--app-muted)}
+.lrow{display:grid;grid-template-columns:1fr auto auto;gap:16px;align-items:center;padding:11px 0;border-bottom:1px solid var(--app-row);font-size:14px}
+.lrow:last-child{border-bottom:0;padding-bottom:2px}
+.lrow b{font-weight:600}
+.lrow small{color:var(--app-muted);font-size:12.5px;font-variant-numeric:tabular-nums}
+.tile{background:var(--prussian);color:var(--mist);border-radius:14px;padding:14px 16px;font-size:12.5px;font-weight:600;display:flex;flex-direction:column;gap:4px}
+.tile b{font-size:28px;font-weight:800;letter-spacing:-.03em;color:var(--porcelain)}
+.tile b span{color:var(--mist)}
+/* telefon: proporcije 19,5:9, za 20% manji, sadržaj se skalira sa okvirom */
+.phone{width:290px;aspect-ratio:9/19.5;display:flex;padding:9px;background:#050a14;border-radius:46px;border:1px solid #2a3550;box-shadow:0 40px 80px -24px rgba(0,0,0,.7);zoom:.8}
+.screen{flex:1;min-height:0;position:relative;border-radius:37px;overflow:hidden;background:var(--porcelain);color:var(--prussian);--mk-main:#011638;--mk-tail:#A8B4C8;text-align:left}
+.screen::before{content:"";position:absolute;top:9px;left:50%;transform:translateX(-50%);width:76px;height:22px;border-radius:999px;background:#050a14;z-index:2}
+.pb{padding:42px 14px 14px;display:flex;flex-direction:column;gap:10px}
+.ptop{display:flex;justify-content:space-between;align-items:center;font-weight:700;font-size:14px}
+.ptop span{display:flex;align-items:center;gap:7px}
+.pav{width:30px;height:30px;border-radius:999px;background:var(--app-primary-soft);display:grid;place-items:center;font-size:11px;font-weight:700}
+.pnav{display:flex;gap:3px;font-size:11.5px;color:var(--app-muted);overflow:hidden}
+.pnav span{padding:5px 8px;border-radius:999px;white-space:nowrap}
+.pnav .on{background:var(--app-primary-soft);color:var(--prussian);font-weight:700}
+.ptitle{display:flex;justify-content:space-between;align-items:baseline}
+.ptitle b{font-size:20px;font-weight:800;letter-spacing:-.02em}
+.ptitle small{font-size:11.5px;color:var(--app-muted)}
+.dl{background:#fff;border:1px solid var(--app-border);border-radius:16px;padding:2px 11px}
+.dl div{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:9px 0;border-bottom:1px solid var(--app-row);font-size:12.5px}
+.dl div:last-child{border-bottom:0}
+.dl b{display:block;font-weight:700;font-size:12.5px}
+.dl small{font-size:10.5px;color:var(--app-muted)}
+.pglow{position:absolute;inset:-60px -100px;background:radial-gradient(closest-side,rgba(63,142,252,.16),rgba(63,142,252,0));pointer-events:none}
+.pstage{position:relative;display:flex;justify-content:center}
+.pstage .phone{position:relative;z-index:4}
+.back{display:none}
+
+/* ================= A: ZID HAOSA, CENTAR ================= */
+.A-hero{position:relative;overflow:hidden;background:linear-gradient(180deg,var(--prussian) 0%,var(--night) 100%);padding-bottom:80px}
+.A-wall{position:absolute;inset:0}
+.A-calm{position:absolute;inset:0;background:radial-gradient(ellipse 34% 60% at 50% 52%,var(--night) 0%,rgba(4,10,23,.95) 52%,rgba(4,10,23,.5) 78%,rgba(4,10,23,0) 100%);pointer-events:none}
+.A-center{position:relative;z-index:5;display:flex;flex-direction:column;align-items:center;text-align:center;gap:22px;padding-top:clamp(24px,4cqi,56px)}
+.A-center .h1{max-width:13ch}
+.A-center .lede{text-align:center}
+.A-center .ctas{justify-content:center}
+.A-center .pstage{margin-top:28px}
+.split{position:relative;display:grid;grid-template-columns:1fr 1fr;min-height:800px}
+.split-dark{position:relative;overflow:hidden;background:radial-gradient(120% 90% at 30% 40%,#0d1d3d 0%,#050c1c 70%)}
+.split-light{position:relative;background:var(--porcelain);display:flex;align-items:center;justify-content:center;padding:240px clamp(20px,4cqi,64px) 72px}
+.split .big{position:absolute;top:clamp(28px,3.4cqi,48px);left:clamp(20px,3.4cqi,48px);right:clamp(20px,3.4cqi,48px);z-index:6}
+.split .seam{left:50%;top:50%;translate:-50% -50%}
+
+/* ================= B: ASIMETRIČNO ================= */
+.B-hero{position:relative;overflow:hidden;background:linear-gradient(180deg,var(--prussian) 0%,var(--night) 100%)}
+.B-grid{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:24px;align-items:center;padding-block:24px 64px}
+.B-copy{position:relative;z-index:5;display:flex;flex-direction:column;gap:22px}
+.B-stage{position:relative;height:660px}
+.B-stage .pstage{position:absolute;left:50%;top:50%;translate:-50% -50%;z-index:10}
+.band{position:relative}
+.band-in{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:56px;align-items:center;padding-block:clamp(64px,8cqi,120px)}
+.band.dark{background:radial-gradient(120% 120% at 70% 50%,#0d1d3d 0%,#050c1c 70%)}
+.band.light{background:var(--porcelain);color:var(--prussian)}
+.band.light .band-in .vis{order:-1}
+.pts{list-style:none;margin:24px 0 0;padding:0;display:flex;flex-direction:column;gap:10px}
+.pts li{display:flex;gap:12px;align-items:baseline;font-size:17px;line-height:1.45;font-weight:600}
+.pts li::before{content:"";width:8px;height:8px;border-radius:2px;flex:none;translate:0 -2px}
+.band.dark .pts li{color:var(--porcelain)}.band.dark .pts li::before{background:var(--mist)}
+.band.light .pts li{color:var(--prussian)}.band.light .pts li::before{background:var(--prussian)}
+.collage{position:relative;height:440px}
+.light-vis{display:flex;flex-direction:column;align-items:center;gap:16px}
+.light-vis .tile{width:min(500px,100%);flex-direction:row;justify-content:space-between;align-items:center}
+.band .seam{left:50%;top:0;translate:-50% -50%}
+
+/* ================= C: ODOZGO NADOLE, DIJAGONALA ================= */
+.C-hero{position:relative;overflow:hidden;background:linear-gradient(180deg,#0a1a3a 0%,var(--prussian) 35%,var(--night) 100%)}
+.C-rain{position:absolute;left:0;right:0;top:76px;height:440px;-webkit-mask-image:linear-gradient(180deg,#000 30%,transparent 100%);mask-image:linear-gradient(180deg,#000 30%,transparent 100%)}
+.C-grid{position:relative;z-index:5;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:40px;align-items:end;padding-block:clamp(220px,20cqi,310px) 72px}
+.C-copy{display:flex;flex-direction:column;gap:22px}
+.C-side{display:flex;flex-direction:column;gap:24px;align-items:flex-start}
+.C-side .pstage{align-self:center}
+.diag{position:relative;display:grid}
+.dz,.lz{grid-area:1/1}
+.dz{position:relative;min-height:860px;overflow:hidden;background:radial-gradient(120% 90% at 25% 45%,#0d1d3d 0%,#050c1c 70%)}
+.dz .big{position:absolute;top:48px;left:clamp(20px,3.4cqi,48px);z-index:6}
+.dz .collage{position:absolute;left:0;top:200px;bottom:30px;width:56%;height:auto}
+.lz{position:relative;z-index:4;background:var(--porcelain);clip-path:polygon(60% 0,100% 0,100% 100%,42% 100%);display:flex;flex-direction:column;align-items:flex-end;justify-content:space-between;padding:48px clamp(20px,3.4cqi,48px) 64px}
+.lz .big{text-align:right}
+.lz .big .bs{margin-left:auto}
+.lz .ledger{width:min(460px,38cqi)}
+.diag .seam{left:51%;top:50%;translate:-50% -50%}
+
+/* inboks na telefonu */
+.inbox{padding:42px 14px 14px;display:flex;flex-direction:column}
+.ib-h{display:flex;justify-content:space-between;align-items:baseline;padding-bottom:8px}
+.ib-h b{font-size:22px;font-weight:800;letter-spacing:-.02em}
+.ib-h small{font-size:11.5px;color:var(--app-muted);font-weight:600}
+.ib-s{height:30px;border-radius:10px;background:var(--app-soft);margin-bottom:6px}
+.ib{display:grid;grid-template-columns:34px minmax(0,1fr) auto;gap:2px 10px;align-items:center;padding:8px 0;border-bottom:1px solid var(--app-row)}
+.ib i{grid-row:span 2;width:34px;height:34px;border-radius:999px;background:#e3e2dc;display:grid;place-items:center;font-style:normal;font-size:11px;font-weight:800;color:#5c5b54}
+.ib b{font-size:12.5px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ib span{font-size:11.5px;color:var(--app-muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ib small{font-size:10px;color:var(--app-muted);text-align:right}
+.ib em{justify-self:end;font-style:normal;min-width:20px;height:20px;padding:0 6px;border-radius:999px;background:var(--prussian);color:var(--porcelain);font-size:10.5px;font-weight:800;display:grid;place-items:center}
+/* pregled na telefonu */
+.peye{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--app-muted)}
+.ph1{font-size:18px;font-weight:800;letter-spacing:-.02em;margin-top:3px}
+.pmeta{font-size:11px;color:var(--app-muted);margin-top:2px}
+.ptiles{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.pt{background:var(--app-soft);border-radius:12px;padding:10px 11px;font-size:11px;font-weight:600;color:var(--app-muted);display:flex;flex-direction:column;gap:3px;min-height:70px}
+.pt b{font-size:21px;font-weight:800;letter-spacing:-.03em;color:var(--prussian)}
+.pt.dark{background:var(--prussian);color:var(--mist)}
+.pt.dark b{color:var(--porcelain)}
+.pt.dark b span{color:var(--mist)}
+/* druga sekcija: dva telefona */
+.split-dark{display:flex;align-items:center;justify-content:center;padding:250px clamp(20px,4cqi,64px) 80px}
+.pwrap{position:relative;z-index:4}
+.pwrap .cnt{position:absolute;top:-14px;right:-14px;z-index:6;min-width:44px;height:44px;padding:0 10px;border-radius:999px;background:var(--porcelain);color:var(--prussian);font-weight:800;font-size:18px;display:grid;place-items:center;box-shadow:0 0 0 6px rgba(5,12,28,.95)}
+.split-light .seam{left:0;top:50%;translate:-50% -50%}
+/* ================= RESPONSIVE ================= */
+@container var (max-width:1080px){
+  .nav{display:none}
+  .lz .ledger{width:min(440px,42cqi)}
+}
+@container var (max-width:900px){
+  .A-wall,.A-calm{display:none}
+  .back{display:block}
+  .A-center{text-align:left;align-items:flex-start}
+  .A-center .lede{text-align:left}
+  .A-center .ctas{justify-content:flex-start}
+  .A-center .pstage{align-self:center}
+  .split{grid-template-columns:1fr;min-height:0}
+  .split-dark{padding:200px 16px 72px}
+  .split-light{padding:230px 16px 72px}
+  .split-light .big{top:72px}
+  .split-light .seam{left:50%;top:0}
+  .B-grid{grid-template-columns:1fr;gap:8px}
+  .B-stage{height:600px}
+  .band-in{grid-template-columns:1fr;gap:32px}
+  .band.light .band-in .vis{order:0}
+  .collage{height:420px}
+  .C-grid{grid-template-columns:1fr;gap:36px;padding-top:250px}
+  .C-rain{height:340px;top:70px}
+  .dz{min-height:620px}
+  .dz .collage{width:100%;top:190px}
+  .lz{grid-area:2/1;clip-path:polygon(0 48px,100% 0,100% 100%,0 100%);margin-top:-48px;align-items:flex-start;padding:96px 16px 56px;gap:28px}
+  .lz .big{text-align:left}
+  .lz .big .bs{margin-left:0}
+  .lz .ledger{width:100%}
+  .diag .seam{left:50%;top:620px}
+}
+@container var (max-width:560px){
+  .login,.long{display:none}.short{display:inline}
+  .ctas{flex-direction:column;align-self:stretch}
+  .ctas .btn{width:100%}
+  .lrow small{display:none}
+  .split-dark .fr,.collage .fr,.B-stage .fr,.C-rain .fr,.back{zoom:.72}
+  .hide-s{display:none}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="pp" viewBox="0 0 54 90">
+    <g style="fill:var(--mk-tail,#A8B4C8)"><rect x="22" y="22" width="10" height="10" rx="2.5"/><rect x="22" y="58" width="10" height="10" rx="2.5"/><rect x="40" y="58" width="10" height="10" rx="2.5"/><rect x="22" y="76" width="10" height="10" rx="2.5"/><rect x="40" y="76" width="10" height="10" rx="2.5"/></g>
+    <g style="fill:var(--mk-main,#011638)"><rect x="1.5" y="1.5" width="15" height="15" rx="3.5"/><rect x="1.5" y="19.5" width="15" height="15" rx="3.5"/><rect x="1.5" y="37.5" width="15" height="15" rx="3.5"/><rect x="1.5" y="55.5" width="15" height="15" rx="3.5"/><rect x="1.5" y="73.5" width="15" height="15" rx="3.5"/><rect x="19.5" y="1.5" width="15" height="15" rx="3.5"/><rect x="37.5" y="1.5" width="15" height="15" rx="3.5"/><rect x="37.5" y="19.5" width="15" height="15" rx="3.5"/><rect x="19.5" y="37.5" width="15" height="15" rx="3.5"/><rect x="37.5" y="37.5" width="15" height="15" rx="3.5"/></g>
+  </symbol>
+</svg>
+
+<template id="tpl-slip"><div class="slip"><h5>NALOG ZA UPLATU</h5><div class="g"><div>uplatilac<div class="bx t">Jelena Petrović<br>Beograd</div></div><div>iznos<div class="bx">=3.500,00</div></div><div>svrha uplate<div class="bx t">školarina za oktobar, Luka</div></div><div>šifra plaćanja<div class="bx">289</div></div><div>primalac<div class="bx t">Muzička škola Harmonija</div></div><div>poziv na broj<div class="bx">&nbsp;</div></div></div></div></template>
+<template id="tpl-sheet"><div class="sheet"><span class="h">Ime</span><span class="h">Okt</span><span class="h">Napomena</span><span>Luka P.</span><span class="q">?</span><span>poslala sliku?</span><span>Vuk Đ.</span><span class="q">?</span><span>pitati Dragana</span><span>Sara N.</span><span>da?</span><span>proveriti</span><span>Mila P.</span><span>da</span><span></span></div></template>
+<template id="tpl-dir"><div class="phone"><div class="screen"><div class="pb">
+  <div class="ptop"><span><svg class="mark-sm" aria-hidden="true"><use href="#pp"/></svg>PratiPlati</span><span class="pav">MS</span></div>
+  <div class="pnav"><span>Pregled</span><span>Grupe</span><span>Zahtevi 3</span><span class="on">Učenici</span></div>
+  <div class="ptitle"><b>Učenici</b><small>Oktobar 2026</small></div>
+  <div class="dl">
+    <div><span><b>Luka Petrović</b><small>Gitara I · 3.500 RSD</small></span><span class="badge b-pend">ČEKA POTVRDU</span></div>
+    <div><span><b>Mila Petrović</b><small>Klavir I · 4.000 RSD</small></span><span class="badge b-paid">PLAĆENO</span></div>
+    <div><span><b>Vuk Đorđević</b><small>Violina I · 4.500 RSD</small></span><span class="badge b-wait">ČEKA UPLATU</span></div>
+    <div><span><b>Sara Nikolić</b><small>Gitara II · 3.500 RSD</small></span><span class="badge b-paid">PLAĆENO</span></div>
+    <div><span><b>Andrej Lukić</b><small>Klavir I · 4.000 RSD</small></span><span class="badge b-rej">ODBIJENO</span></div>
+    <div><span><b>Nina Janković</b><small>Gitara I · 3.500 RSD</small></span><span class="badge b-paid">PLAĆENO</span></div>
+    <div><span><b>Teodor Savić</b><small>Violina I · 4.500</small></span><span class="badge b-pend">ČEKA POTVRDU</span></div>
+    <div><span><b>Iva Popović</b><small>Gitara II · 3.500 RSD</small></span><span class="badge b-paid">PLAĆENO</span></div>
+  </div>
+</div></div></div></template>
+<template id="tpl-inbox"><div class="phone"><div class="screen"><div class="inbox">
+  <div class="ib-h"><b>Poruke</b><small>48 nepročitanih</small></div>
+  <div class="ib-s"></div>
+  <div class="ib"><i>KL</i><b>Roditelji, Klavir I</b><small>21:40</small><span>Ana: Da li je neko platio za oktobar?</span><em>23</em></div>
+  <div class="ib"><i>JP</i><b>Jelena Petrović</b><small>21:14</small><span>Platila sam još 3. oktobra, poslala sam sliku</span><em>2</em></div>
+  <div class="ib"><i>DR</i><b>Dragan, nastavnik</b><small>20:02</small><span>Prosleđujem 5 slika od roditelja</span><em>5</em></div>
+  <div class="ib"><i>MN</i><b>Marko Nikolić</b><small>19:30</small><span>Izvinite, koliko je za oktobar?</span><em>1</em></div>
+  <div class="ib"><i>PĐ</i><b>Petar Đorđević</b><small>juče</small><span>Fotografija</span><em>3</em></div>
+  <div class="ib"><i>GI</i><b>Roditelji, Gitara II</b><small>juče</small><span>Milan: Na koji račun se plaća?</span><em>12</em></div>
+  <div class="ib"><i>IM</i><b>Ivana Marković</b><small>juče</small><span>Poslala sam nastavniku sliku</span><em>1</em></div>
+  <div class="ib"><i>SN</i><b>Sara Nikolić</b><small>uto</small><span>Da li je stiglo?</span><em>1</em></div>
+</div></div></div></template>
+<template id="tpl-pregled"><div class="phone"><div class="screen"><div class="pb">
+  <div class="ptop"><span><svg class="mark-sm" aria-hidden="true"><use href="#pp"/></svg>PratiPlati</span><span class="pav">MS</span></div>
+  <div class="pnav"><span class="on">Pregled</span><span>Grupe</span><span>Zahtevi 3</span><span>Učenici</span></div>
+  <div><div class="peye">Organizacija</div><div class="ph1">Muzička škola Harmonija</div><div class="pmeta">Oktobar 2026 · rok 31. 10. 2026.</div></div>
+  <div class="ptiles"><div class="pt dark">Uplaćeno ovog meseca<b>96 <span>/ 128</span></b></div><div class="pt">Dokazi za potvrdu<b>12</b></div><div class="pt">Neizmireno<b>20</b></div><div class="pt">Zahtevi za članstvo<b>3</b></div></div>
+  <div class="dl">
+    <div><span><b>Gitara I</b><small>Dragan Ristić · 16 / 18</small></span><small>3 dokaza</small></div>
+    <div><span><b>Klavir I</b><small>Ivana Lazić · 18 / 18</small></span><small>4 dokaza</small></div>
+    <div><span><b>Violina I</b><small>Marija Kostić · 11 / 12</small></span><small>1 dokaz</small></div>
+    <div><span><b>Gitara II</b><small>Dragan Ristić · 14 / 16</small></span><small>2 dokaza</small></div>
+  </div>
+</div></div></div></template>
+<template id="tpl-ledger"><div class="ledger">
+  <div class="ledger-head"><b>Gitara I</b><span>Oktobar 2026 · rok 31. 10.</span></div>
+  <div class="lrow"><b>Luka Petrović</b><small>3.500 RSD</small><span class="badge b-pend">ČEKA POTVRDU</span></div>
+  <div class="lrow"><b>Nina Janković</b><small>3.500 RSD</small><span class="badge b-paid">PLAĆENO</span></div>
+  <div class="lrow"><b>Vuk Đorđević</b><small>3.500 RSD</small><span class="badge b-wait">ČEKA UPLATU</span></div>
+  <div class="lrow"><b>Andrej Lukić</b><small>3.500 RSD</small><span class="badge b-rej">ODBIJENO</span></div>
+  <div class="lrow"><b>Sara Nikolić</b><small>3.500 RSD</small><span class="badge b-paid">PLAĆENO</span></div>
+  <div class="lrow"><b>Iva Popović</b><small>3.500 RSD</small><span class="badge b-paid">PLAĆENO</span></div>
+</div></template>
+<template id="tpl-hd"><header class="hd"><a class="logo" href="#"><svg class="mark" aria-hidden="true"><use href="#pp"/></svg>PratiPlati</a><nav class="nav" aria-label="Glavna navigacija"><a href="#">Kako radi</a><a href="#">Statusi</a><a href="#">Za direktore</a><a href="#">Pitanja</a></nav><div class="hd-right"><a class="login" href="#">Prijava</a><a class="btn btn-cta btn-sm" href="#"><span class="long">Zakažite razgovor</span><span class="short">Razgovor</span></a></div></header></template>
+
+<nav class="bb" aria-label="Navigacija table"><b>PratiPlati: varijanta A</b><a href="#ta">Desktop</a><a href="#tm">Telefon i tablet</a></nav>
+
+<!-- ================================ A ================================ -->
+<div class="bl" id="ta"><h2>Varijanta A: zid haosa, pa isti telefon dva puta</h2><p>Hero: zamućen haos u pozadini, u fokusu telefon sa pregledom meseca. Druga sekcija: „Danas“ i „Sa PratiPlati“, na svakoj strani po jedan oštar telefon: pretrpan inboks levo, lista statusa desno. Suzi prozor da vidiš tablet i telefon.</p></div>
+<div class="bf"><div class="var" id="va">
+  <div class="A-hero">
+    <div class="A-wall" aria-hidden="true">
+      <div class="fr d3" style="top:9%;left:21%;rotate:6deg" data-tpl="tpl-sheet"></div>
+      <div class="fr bub d3" style="top:31%;left:18%;rotate:-4deg"><b>Roditelji, Klavir I</b>Da li je neko platio za oktobar?<small>21:40</small></div>
+      <div class="fr d3" style="top:69%;left:15%;rotate:10deg" data-tpl="tpl-slip"></div>
+      <div class="fr mail d3" style="top:90%;left:21%;rotate:3deg"><i>MN</i><b>Re: Re: uplata za oktobar</b><span>Marko Nikolić</span></div>
+      <div class="fr bub d3" style="top:6%;right:23%;rotate:-5deg"><b>Ana Savić</b>Da li je stiglo?<small>uto</small></div>
+      <div class="fr d3" style="top:32%;right:20%;rotate:4deg" data-tpl="tpl-sheet"></div>
+      <div class="fr sticky d3" style="top:80%;right:22%;rotate:6deg">Gitara II<br>ko nije platio???</div>
+      <div class="fr d2 drift b" style="top:26%;left:2%;rotate:8deg" data-tpl="tpl-slip"></div>
+      <div class="fr d2 drift e" style="top:55%;left:-1%;rotate:-3deg" data-tpl="tpl-sheet"></div>
+      <div class="fr bub me d2 drift" style="top:82%;left:3%;rotate:-4deg">Proveriću pa vam javim.<small>Vi</small></div>
+      <div class="fr d2 drift c" style="top:36%;right:2%;rotate:-7deg" data-tpl="tpl-slip"></div>
+      <div class="fr mail d2 drift" style="top:66%;right:0;rotate:3deg"><i>DR</i><b>Fwd: Fwd: uplate (5)</b><span>Dragan Ristić · 5 priloga</span></div>
+      <div class="fr bub d2" style="top:86%;right:3%;rotate:-3deg"><b>Roditelji, Gitara II</b>Na koji račun se plaća?<small>juče</small></div>
+      <div class="fr bub d1 drift" style="top:13%;left:1%;rotate:-6deg"><b>Jelena Petrović</b>Platila sam još 3. oktobra, poslala sam vam sliku.<small>21:14</small></div>
+      <div class="fr sticky d1 drift c" style="top:47%;left:14%;rotate:-8deg">Vuk ??<br>Luka platio?</div>
+      <div class="fr bub d1 drift b" style="top:11%;right:1%;rotate:5deg"><b>Dragan, nastavnik</b>Prosleđujem 5 slika od roditelja<span class="pic"></span><small>20:02</small></div>
+      <div class="fr bub d1 drift e" style="top:55%;right:12%;rotate:4deg"><b>Marko Nikolić</b>Izvinite, koliko je za oktobar?<small>19:30</small></div>
+      <div class="vign"></div>
+    </div>
+    <div class="A-calm"></div>
+    <div class="wrap" data-tpl="tpl-hd"></div>
+    <div class="wrap A-center">
+      <p class="kicker">Evidencija mesečnih uplata za škole i organizacije</p>
+      <h1 class="h1">Dosta vam je haosa <span>sa uplatama?</span></h1>
+      <p class="lede">Dokaz o uplati stiže direktno sa telefona. Vi ga potvrdite i na jednom ekranu vidite ko je platio, a ko nije.</p>
+      <div class="ctas"><a class="btn btn-cta" href="#">Zakažite razgovor</a><a class="btn btn-line" href="#">Pogledajte kako radi</a></div>
+      <div class="pstage" role="img" aria-label="Telefon sa pregledom meseca: uplaćeno 96 od 128, 12 dokaza čeka potvrdu, 3 zahteva.">
+        <div class="pglow"></div>
+        <div class="fr back d3" style="top:40px;left:calc(50% - 250px);rotate:-9deg" data-tpl="tpl-slip"></div>
+        <div class="fr back bub d2" style="top:170px;right:calc(50% - 250px);rotate:7deg"><b>Jelena Petrović</b>Platila sam, poslala sam sliku.<small>21:14</small></div>
+        <div class="fr back d2" style="top:330px;left:calc(50% - 240px);rotate:-5deg" data-tpl="tpl-sheet"></div>
+        <div class="fr back sticky d3" style="top:20px;right:calc(50% - 210px);rotate:8deg">Vuk ??</div>
+        <div data-tpl="tpl-pregled"></div>
+      </div>
+    </div>
+  </div>
+
+  <section class="split" aria-label="Danas i sa PratiPlati">
+    <div class="split-dark">
+      <div class="big dark"><p class="bt">Danas</p><p class="bs">48 nepročitanih poruka i nijedan siguran odgovor.</p></div>
+      <div class="fr d3" style="top:30%;left:6%;rotate:-10deg" data-tpl="tpl-slip"></div>
+      <div class="fr d3 hide-s" style="top:66%;right:4%;rotate:8deg" data-tpl="tpl-sheet"></div>
+      <div class="fr sticky d3" style="top:78%;left:10%;rotate:7deg">Vuk ??<br>Luka platio?</div>
+      <div class="pwrap" role="img" aria-label="Telefon sa 48 nepročitanih poruka o uplatama."><span class="cnt" aria-hidden="true">48</span><div data-tpl="tpl-inbox"></div></div>
+    </div>
+    <div class="split-light on-light">
+      <span class="seam"><svg class="mark" aria-hidden="true"><use href="#pp"/></svg></span>
+      <div class="big light"><p class="bt">Sa PratiPlati</p><p class="bs">Isti telefon. Jedna lista, svaki član ima svoj status.</p></div>
+      <div class="pwrap" role="img" aria-label="Telefon sa listom učenika za oktobar i statusom uplate za svakog."><div data-tpl="tpl-dir"></div></div>
+    </div>
+  </section>
+</div></div>
+
+<!-- ================================ UREĐAJI ================================ -->
+<div class="bl" id="tm"><h2>Varijanta A na telefonu (390 px) i tabletu (768 px)</h2><p>Skroluj unutar uređaja. Tablet je prikazan umanjeno da stane na ekran.</p></div>
+<div class="devs">
+  <figure><div class="dev"><div class="dev-scroll" data-clone="va"></div></div><figcaption>A, telefon</figcaption></figure>
+    </div>
+<div class="devs" style="padding-bottom:90px">
+  <figure><div class="tab"><div class="dev-scroll" data-clone="va"></div></div><figcaption>A, tablet</figcaption></figure>
+    </div>
+
+<script>
+(function(){
+  document.querySelectorAll('[data-tpl]').forEach(function(s){var t=document.getElementById(s.getAttribute('data-tpl'));if(t)s.appendChild(t.content.cloneNode(true));});
+  document.querySelectorAll('[data-clone]').forEach(function(slot){
+    var src=document.getElementById(slot.getAttribute('data-clone')); if(!src) return;
+    var c=src.cloneNode(true); c.removeAttribute('id');
+    c.querySelectorAll('[id]').forEach(function(e){e.removeAttribute('id')});
+    slot.appendChild(c);
+  });
+})();
+</script>
+</body>
+</html>

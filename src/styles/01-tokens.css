@@ -1,0 +1,25 @@
+/* TOKENI */
+:root{
+  --prussian:#011638; --night:#040a17; --deep:#020d22; --navy-2:#0a1c40; --navy-3:#0f2a5c;
+  --porcelain:#fafaf7; --paper:#ffffff; --mist:#a8b4c8; --mist-2:#d3dae6;
+  --cta:#3f8efc; --cta-hover:#5b9ffd; --cta-light:#3172cf;
+  --ink:#011638; --muted:#566175; --line-l:#e1e5ec; --soft:#eff2f6; --tint:#e8eefb;
+  --line-d:rgba(168,180,200,.16); --line-d2:rgba(168,180,200,.3);
+  --row:#e9ecf1; --psoft:#dbe9fe;
+  --font:'Manrope Variable','Manrope','Helvetica Neue',Arial,sans-serif;
+  --ease:cubic-bezier(.2,.7,.2,1);
+  --wrap:1360px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--porcelain);color:var(--ink);font-family:var(--font);font-size:17px;line-height:1.55;overflow-x:hidden}
+img,svg,video{display:block;max-width:100%}
+a{color:inherit}
+button{font:inherit}
+:focus-visible{outline:2px solid var(--cta);outline-offset:3px;border-radius:8px}
+.dark :focus-visible{outline-color:var(--porcelain)}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-inline:clamp(20px,3.6vw,56px)}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:16px;top:-60px;z-index:100;background:var(--porcelain);color:var(--ink);padding:10px 14px;border-radius:10px;font-weight:700;text-decoration:none}
+.skip:focus{top:12px}

@@ -1,0 +1,11 @@
+/* FOOTER */
+.ft{background:var(--night);color:var(--mist);padding-block:64px 32px}
+.ft-in{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:40px}
+.ft .logo{color:var(--porcelain)}
+.ft p{margin:10px 0 0;font-size:15px}
+.ft nav{display:flex;flex-wrap:wrap;gap:4px 8px;justify-content:flex-end;align-content:flex-start}
+.ft nav a{text-decoration:none;font-weight:600;font-size:15px;padding:10px 12px;border-radius:10px;min-height:44px;display:inline-flex;align-items:center}
+.ft nav a:hover{color:var(--porcelain)}
+.ft-bot{margin-top:48px;padding-top:24px;border-top:1px solid var(--line-d);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:14px}
+.ft-bot a{text-decoration:none}
+.ft-bot a:hover{color:var(--porcelain)}

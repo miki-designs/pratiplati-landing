@@ -1,0 +1,76 @@
+/* RESPONSIVE */
+@media (max-width:1200px){
+  .rem-grid{grid-template-columns:1fr;gap:48px}
+  .rem-vis{justify-content:center}
+  .rem-vis::before{right:50%;translate:50% -50%}
+}
+@media (max-width:1100px){
+  .nav{display:none}
+  .menu-btn{display:inline-flex}
+  .float{display:none}
+  .hero .curl{left:4%}
+}
+@media (max-width:900px){
+  .roles-grid{grid-template-columns:1fr;gap:48px}
+  .steps .step:nth-of-type(2){margin-top:0}
+  .steps .curl{display:none}
+  .steps{padding-bottom:0}
+  .qa .ans{padding-left:26px}
+  .hero-dots{width:62%;opacity:.6}
+  .how-head,.proof-head,.rem-grid,.start-in,.priv-grid,.faq-grid,.offer-grid,.ft-in,.final-card{grid-template-columns:1fr;gap:32px}
+  .steps,.roles{grid-template-columns:1fr}
+  .app-body{grid-template-columns:1fr}
+  .tiles{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .stat-row{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .rem-vis{flex-direction:column;align-items:center;gap:24px}
+  .remind .dots{width:200px;height:320px;opacity:.35}
+  .mail-wrap{max-width:520px;width:100%}
+  .spark{display:none}
+  .step .mini{max-width:440px}
+  .rem-vis::before{right:50%;translate:50% -50%;width:440px;height:440px}
+  .track{left:24.5px;right:auto;top:20px;bottom:20px;width:3px;height:auto}
+  .track i{transform-origin:50% 0}
+  @keyframes fill{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+  .nodes{grid-template-columns:1fr;gap:28px}
+  .node{flex-direction:row;text-align:left;align-items:center;gap:18px;padding-left:0}
+  .node-vis{height:auto;order:2;margin-left:auto}
+  .dot-n{order:0;margin:0;flex:none;width:52px;height:52px}
+  .dot-n svg{width:17px;height:29px}
+  .node > div:not(.node-vis){order:1}
+  .node .phone{zoom:.36}
+  .start .pix{margin:0}
+  .priv .pix{width:180px}
+  .priv-items{grid-template-columns:1fr}
+  .offer-side{position:static}
+  .faq-side{position:relative;top:auto}
+  .faq-pix{left:auto;right:-14px;top:-34px;height:196px}
+  .faq-side .faq-pix rect{stroke:rgba(63,142,252,.2)}
+  .faq-side .ask{display:none}
+  .ask-m{display:flex;margin-top:4px;max-width:none}
+  .ft nav{justify-content:flex-start}
+  .final .curl{display:none}
+  .final-vis{rotate:0deg}
+}
+@media (max-width:640px){
+  .login{display:none}
+  .long{display:none}.short{display:inline}
+  .ctas{flex-direction:column;align-self:stretch;width:100%}
+  .ctas .btn{width:100%}
+  .float{display:none}
+  .role-row{grid-template-columns:1fr;gap:14px}
+  .rr-top{flex-direction:column;align-items:flex-start;gap:10px}
+  .node{gap:14px}
+  .node > div:not(.node-vis) b{white-space:nowrap}
+  .node .pill-ui{min-height:42px;padding:0 14px;font-size:14px;border-radius:12px;white-space:nowrap}
+  .node-vis > .badge{font-size:11.5px;padding:7px 10px}
+  .scopes{display:none}
+  .qa summary{padding:18px 16px 18px 18px;gap:12px;font-size:16.5px}
+  .qn{width:20px;font-size:12.5px}
+  .qa .ans{padding:0 18px 22px 50px;font-size:16px}
+  .faq summary i{width:32px;height:32px}
+  .stage{margin-top:44px}
+  .play{width:72px;height:72px}.play svg{width:22px;height:22px}
+  .form{grid-template-columns:1fr}
+  .app-user{display:none}
+  .tbl .hide-s{display:none}
+}

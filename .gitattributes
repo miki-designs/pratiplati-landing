@@ -1,0 +1,6 @@
+# Krajevi redova uvek LF (Vercel i Linux), slike i video su binarni
+* text=auto eol=lf
+*.jpg binary
+*.png binary
+*.mp4 binary
+*.woff2 binary
