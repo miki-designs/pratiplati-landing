@@ -1,6 +1,7 @@
 // Zatrazite ponudu: tekst i forma
 
 import OfferForm from '@/components/OfferForm'
+import { PHONE, PHONE_LABEL } from '@/lib/site'
 
 export default function Offer() {
   return (
@@ -15,6 +16,10 @@ export default function Offer() {
             <li><svg className="ico" aria-hidden="true"><use href="#i-clock" /></svg>Odgovaramo sa ponudom i narednim koracima.</li>
             <li><svg className="ico" aria-hidden="true"><use href="#i-shield" /></svg>Podatke koristimo samo za vaš upit.</li>
           </ul>
+          <p className="direct">
+            Radije razgovor? Pozovite <a href={`tel:${PHONE}`}>{PHONE_LABEL}</a> ili pišite na{' '}
+            <a href={`viber://chat?number=${encodeURIComponent(PHONE)}`}>Viber</a>.
+          </p>
         </div>
         <OfferForm />
       </div>

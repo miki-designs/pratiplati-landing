@@ -44,7 +44,7 @@
   .offer-side{position:static}
   .faq-side{position:relative;top:auto}
   .faq-pix{left:auto;right:-14px;top:-34px;height:196px}
-  .faq-side .faq-pix rect{stroke:rgba(63,142,252,.2)}
+  .faq-side .faq-pix rect{stroke:rgba(63,142,252,.14)}
   .faq-side .ask{display:none}
   .ask-m{display:flex;margin-top:4px;max-width:none}
   .ft nav{justify-content:flex-start}

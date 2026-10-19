@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next'
 // Manrope je u projektu (npm paket), pa sajt ne zove Google servere
 import '@fontsource-variable/manrope'
 import '@/styles'
+import { Analytics } from '@vercel/analytics/next'
 import SvgSprite from '@/components/SvgSprite'
 import { SITE_DESCRIPTION, SITE_TITLE, SITE_URL } from '@/lib/site'
 
@@ -32,6 +33,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </a>
         <SvgSprite />
         {children}
+        {/* posete bez kolacica; radi tek na Vercelu kad se ukljuci Web Analytics */}
+        <Analytics />
       </body>
     </html>
   )

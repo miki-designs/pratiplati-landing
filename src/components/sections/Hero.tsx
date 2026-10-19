@@ -14,7 +14,7 @@ export default function Hero() {
       <div className="wrap">
         <div className="hero-copy">
           <h1 className="h1" id="h-hero">Jedan sistem za potpunu kontrolu <em>nad uplatama.</em></h1>
-          <p className="lede">Sve što biste inače pratili ručno, PratiPlati organizuje za vas: vodi evidenciju obaveza, prati kašnjenja i šalje podsetnike, dok korisnici dostavljaju dokaz o uplati direktno kroz aplikaciju.</p>
+          <p className="lede">Sve što biste inače pratili ručno, PratiPlati organizuje za vas: vodi evidenciju obaveza, prati kašnjenja i šalje podsetnike, dok članovi dostavljaju dokaz o uplati direktno kroz aplikaciju.</p>
           <div className="ctas">
             <VideoButton className="btn btn-cta"><span className="play-dot" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-play" /></svg></span>Kako PratiPlati radi</VideoButton>
             <a className="btn btn-ghost" href="#ponuda">Zatražite ponudu</a>

@@ -6,13 +6,15 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "check:offer": "node scripts/offer-check.ts"
   },
   "engines": {
     "node": ">=20.9"
   },
   "dependencies": {
     "@fontsource-variable/manrope": "5.3.0",
+    "@vercel/analytics": "2.0.1",
     "next": "16.3.8",
     "react": "19.3.0",
     "react-dom": "19.3.0"

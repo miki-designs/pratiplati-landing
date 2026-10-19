@@ -3,16 +3,23 @@
 /** Javna adresa landinga. Postavlja se na Vercelu kroz NEXT_PUBLIC_SITE_URL kad domen bude odlucen. */
 export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://pratiplati.bymaricdigital.com'
 
+/** Mejl za upite sa forme i za pitanja o privatnosti */
+export const CONTACT_EMAIL = 'milos.maric.bg@gmail.com'
+
+/** Telefon za razgovor i Viber (javno na sajtu) */
+export const PHONE = '+381637840905'
+export const PHONE_LABEL = '063 784 0905'
+
 /** Prijava vodi u aplikaciju */
 export const APP_LOGIN_URL = 'https://www.pratiplati.com/admin'
 
 export const NAV = [
-  { href: '#kako-radi', label: 'Kako radi' },
-  { href: '#podsetnici', label: 'Podsetnici' },
-  { href: '#privatnost', label: 'Privatnost' },
-  { href: '#pitanja', label: 'Česta pitanja' },
+  { href: '/#kako-radi', label: 'Kako radi' },
+  { href: '/#podsetnici', label: 'Podsetnici' },
+  { href: '/#privatnost', label: 'Privatnost' },
+  { href: '/#pitanja', label: 'Česta pitanja' },
 ]
 
 export const SITE_TITLE = 'PratiPlati | Evidencija i praćenje uplata za organizacije'
 export const SITE_DESCRIPTION =
-  'PratiPlati vodi evidenciju obaveza, prati kašnjenja i šalje podsetnike, a korisnici dostavljaju dokaz o uplati direktno kroz aplikaciju.'
+  'PratiPlati vodi evidenciju obaveza, prati kašnjenja i šalje podsetnike, a članovi dostavljaju dokaz o uplati direktno kroz aplikaciju.'

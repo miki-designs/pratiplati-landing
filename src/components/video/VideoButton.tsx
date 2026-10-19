@@ -2,6 +2,7 @@
 
 // Dugme koje otvara video prozor i pusta video od pocetka
 
+import { track } from '@vercel/analytics'
 import { VIDEO_DIALOG_ID } from './VideoDialog'
 
 type Props = React.ButtonHTMLAttributes<HTMLButtonElement>
@@ -14,6 +15,7 @@ export default function VideoButton({ children, ...rest }: Props) {
     dialog.showModal()
     video.currentTime = 0
     video.play().catch(() => {})
+    track('Pustio video') // shortcut: posebni dogadjaji se vide tek na Vercel Pro planu
   }
 
   return (

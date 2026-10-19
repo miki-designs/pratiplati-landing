@@ -10,7 +10,7 @@ export default function Reminders() {
         <div className="reveal">
           <p className="eyebrow">Podsetnici</p>
           <h2 className="h2" id="h-rem">Automatski podsetnici, bez ručnog praćenja.</h2>
-          <p className="lead">PratiPlati automatski prepoznaje kašnjenja i šalje podsetnike prema pravilima koja ste postavili, bez ručnog proveravanja svakog korisnika.</p>
+          <p className="lead">PratiPlati automatski prepoznaje kašnjenja i šalje podsetnike prema pravilima koja ste postavili, bez ručnog proveravanja svakog člana.</p>
           <ul className="rules">
             <li><span className="chk" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-check" /></svg></span><span>5 dana pre roka<small>Podsetnik pre nego što rok istekne</small></span></li>
             <li><span className="chk" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-check" /></svg></span><span>Na dan roka<small>Poslednji dan za uplatu</small></span></li>
@@ -18,10 +18,10 @@ export default function Reminders() {
           </ul>
           <div className="channels"><span className="chan"><svg className="ico" aria-hidden="true"><use href="#i-mail" /></svg>E-pošta</span><span className="chan"><svg className="ico" aria-hidden="true"><use href="#i-sms" /></svg>SMS</span></div>
         </div>
-        <div className="rem-vis reveal" role="img" aria-label="Primer podsetnika e-poštom i SMS-om za korisnika čija uplata kasni.">
+        <div className="rem-vis reveal" role="img" aria-label="Primer podsetnika e-poštom i SMS-om za člana čija uplata kasni.">
           <div className="rem-ph"><PhoneLock /></div>
           <div className="mail-wrap">
-            <span className="mail-cap"><svg className="ico" aria-hidden="true"><use href="#i-mail" /></svg>E-pošta koju korisnik dobija</span>
+            <span className="mail-cap"><svg className="ico" aria-hidden="true"><use href="#i-mail" /></svg>E-pošta koju član dobija</span>
             <div className="mail-stack"><div className="mail">
               <div className="mail-top"><span className="mail-app"><svg aria-hidden="true" style={{ '--mk-main': '#FAFAF7', '--mk-tail': '#A8B4C8' }}><use href="#pp" /></svg></span><span className="mail-from"><b>PratiPlati</b><small>Za: Jelena Petrović</small></span><small className="mail-time">danas, 09:00</small></div>
               <p className="mail-subj">Podsetnik o uplatama</p>

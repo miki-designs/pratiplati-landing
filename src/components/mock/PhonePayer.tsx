@@ -1,4 +1,4 @@
-// Maketa telefona: ekran korisnika sa obavezom, dokazom o uplati i prethodnim uplatama
+// Maketa telefona: ekran člana sa obavezom, dokazom o uplati i prethodnim uplatama
 
 import LogoMark from '@/components/art/LogoMark'
 import StatusBar from './StatusBar'

@@ -27,6 +27,8 @@
 .offer-sec{background:radial-gradient(80% 60% at 85% 10%,#0b2350 0%,rgba(11,35,80,0) 70%),linear-gradient(180deg,var(--prussian) 0%,var(--night) 100%);border-bottom:1px solid var(--line-d)}
 .offer-sec .assure li{color:var(--porcelain)}
 .offer-sec .assure .ico{color:var(--mist)}
+.direct{margin:32px 0 0;padding-top:24px;border-top:1px solid var(--line-d);font-size:17px;color:var(--mist)}
+.direct a{color:var(--porcelain);font-weight:800;text-underline-offset:4px;text-decoration-color:rgba(250,250,247,.35)}
 .offer-sec .form{background:linear-gradient(180deg,rgba(250,250,247,.06),rgba(250,250,247,.025));border:1px solid rgba(168,180,200,.18);box-shadow:inset 0 1px 0 rgba(250,250,247,.06),0 60px 120px -60px rgba(0,0,0,.9)}
 .offer-sec .fld label{color:var(--porcelain)}
 .offer-sec .fld label span{color:var(--mist)}

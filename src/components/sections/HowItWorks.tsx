@@ -25,7 +25,7 @@ export default function HowItWorks() {
           <article className="step inv reveal">
             <div className="step-top"><Pix rows={['..###..', '#######', '##...##', '#..a..#', '##...##', '#######']} className="step-pix" label="Kamera" /><span className="num">02</span></div>
             <h3>Pratite uplate</h3>
-            <p>Korisnik nakon plaćanja fotografiše ili prilaže dokaz o uplati direktno kroz PratiPlati. Dokaz se vezuje za njegovu obavezu, a vi ili ovlašćeni saradnik ga pregledate i potvrđujete.</p>
+            <p>Član nakon plaćanja fotografiše ili prilaže dokaz o uplati direktno kroz PratiPlati. Dokaz se vezuje za njegovu obavezu, a vi ili ovlašćeni saradnik ga pregledate i potvrđujete.</p>
             <div className="mini" aria-hidden="true">
               <div className="mini-file"><i></i><span><b>uplatnica-oktobar.jpg</b><br /><small style={{ color: 'var(--muted)' }}>Luka P. · Oktobar 2026</small></span></div>
               <div className="mini-row"><span className="badge b-pend">ČEKA POTVRDU</span><span className="mini-btn">Potvrdi</span></div>
