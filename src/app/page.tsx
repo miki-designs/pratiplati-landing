@@ -12,6 +12,7 @@ import Offer from '@/components/sections/Offer'
 import Footer from '@/components/sections/Footer'
 import VideoDialog from '@/components/video/VideoDialog'
 import CurlObserver from '@/components/motion/CurlObserver'
+import LinkOpenPing from '@/components/LinkOpenPing'
 import posterHero from '@/assets/poster-hero.jpg'
 
 export default function Home() {
@@ -33,6 +34,7 @@ export default function Home() {
       <Footer />
       <VideoDialog src="/media/pratiplati-video.mp4" poster={posterHero.src} />
       <CurlObserver />
+      <LinkOpenPing />
     </>
   )
 }

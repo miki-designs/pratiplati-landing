@@ -40,12 +40,17 @@ export default function PrivacyPolicy() {
               <b>Pri poseti sajtu:</b> zbirne podatke o posetama (koje stranice se otvaraju, iz koje zemlje, sa kog uređaja). Ovi podaci ne služe da vas
               lično prepoznamo.
             </li>
+            <li>
+              <b>Kad otvorite lični link</b> koji smo vam poslali posle razgovora (adresa sa oznakom, na primer <code>?za=ime</code>): beležimo da je
+              link otvoren i kada.
+            </li>
           </ul>
 
           <h2>Zašto ih koristimo</h2>
           <ul>
             <li>Podatke iz forme koristimo da odgovorimo na vaš upit i pošaljemo ponudu, na vaš zahtev, pre eventualnog dogovora o saradnji.</li>
             <li>Zbirne podatke o posetama koristimo da razumemo da li je sajt jasan i da ga poboljšamo, na osnovu našeg legitimnog interesa.</li>
+            <li>Podatak o otvorenom ličnom linku koristimo da znamo kada je pravo vreme da vam se javimo posle razgovora, na osnovu našeg legitimnog interesa.</li>
           </ul>
           <p>Ne prodajemo podatke, ne koristimo ih za oglašavanje i ne šaljemo vam reklamne poruke bez vašeg pristanka.</p>
 
