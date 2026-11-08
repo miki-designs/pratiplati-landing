@@ -5,7 +5,7 @@
 .final-card .h2{max-width:14ch}
 .final-card .lead{color:var(--mist)}
 .final-card .ctas{justify-content:flex-start;margin-top:32px}
-.final-card .ctas .btn{flex:1 1 230px}
+@media (min-width:641px){.final-card .ctas .btn{flex:1 1 230px}}
 .final-vis{position:relative;rotate:3deg}
 .final-vis .poster{width:100%;border-radius:22px;box-shadow:0 50px 90px -40px rgba(0,0,0,.9)}
 .final-vis .play{width:76px;height:76px}
