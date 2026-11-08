@@ -20,7 +20,8 @@
 .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
 .form .btn{grid-column:1/-1;width:100%;min-height:58px;font-size:17px}
 .form-note{grid-column:1/-1;margin:0;font-size:14px;color:var(--muted);text-align:center}
-.form-ok{grid-column:1/-1;display:none;align-items:center;gap:14px;padding:18px;border-radius:18px;background:#eff8f1;color:#24552e;font-weight:700}
+.form-ok{grid-column:1/-1;display:none;align-items:center;gap:16px;padding:22px;border-radius:20px;background:rgba(250,250,247,.06);border:1px solid rgba(168,180,200,.22);color:var(--porcelain);font-weight:700;line-height:1.5}
+.form-ok .ico{flex:none;width:44px;height:44px;padding:11px;border-radius:999px;background:var(--cta);color:#fff}
 .form.sent .fld,.form.sent .btn,.form.sent .form-note{display:none}
 .form.sent .form-ok{display:flex}
 /* forma u tamnom rezimu */
@@ -39,6 +40,8 @@
 .offer-sec .fld input:hover,.offer-sec .fld select:hover,.offer-sec .fld textarea:hover{border-color:rgba(168,180,200,.45)}
 .offer-sec .fld input:focus,.offer-sec .fld select:focus,.offer-sec .fld textarea:focus{border-color:var(--mist);box-shadow:0 0 0 4px rgba(63,142,252,.22)}
 .offer-sec .fld input:-webkit-autofill{-webkit-box-shadow:0 0 0 100px #0a1530 inset;-webkit-text-fill-color:var(--porcelain)}
-.offer-sec .fld input[aria-invalid="true"],.offer-sec .fld select[aria-invalid="true"]{border-color:#e08a80}
-.offer-sec .err,.offer-sec .fld-msg{color:#f0a39b}
+.offer-sec .fld input[aria-invalid="true"],.offer-sec .fld select[aria-invalid="true"],.offer-sec .fld textarea[aria-invalid="true"]{border-color:#d97872}
+.offer-sec .fld-msg{color:#d97872}
+.offer-sec .err:not(:empty){flex-direction:row;align-items:center;gap:14px;padding:16px 18px;border-radius:18px;background:rgba(217,120,114,.08);border:1px solid rgba(217,120,114,.32);color:var(--porcelain);font-size:15px}
+.offer-sec .err:not(:empty)::before{content:"!";flex:none;width:30px;height:30px;border-radius:999px;display:grid;place-items:center;background:#d97872;color:var(--night);font-weight:800}
 .offer-sec .form-note{color:var(--mist)}
