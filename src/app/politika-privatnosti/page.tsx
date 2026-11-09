@@ -1,14 +1,15 @@
 import type { Metadata } from 'next'
 import Header from '@/components/Header'
 import Footer from '@/components/sections/Footer'
-import { CONTACT_EMAIL } from '@/lib/site'
+import { CONTACT_EMAIL, PRIVACY_UPDATED } from '@/lib/site'
 
 export const metadata: Metadata = {
-  title: 'Politika privatnosti | PratiPlati',
+  title: 'Politika privatnosti',
   description: 'Kako PratiPlati obrađuje podatke koje ostavite na sajtu i kroz formu za ponudu.',
+  alternates: { canonical: '/politika-privatnosti' },
 }
 
-const UPDATED = '19. oktobar 2026.'
+const UPDATED = PRIVACY_UPDATED.label
 
 export default function PrivacyPolicy() {
   const mail = <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>

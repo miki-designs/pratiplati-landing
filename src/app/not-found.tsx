@@ -1,5 +1,11 @@
+import type { Metadata } from 'next'
 import Header from '@/components/Header'
 import Footer from '@/components/sections/Footer'
+
+export const metadata: Metadata = {
+  title: 'Stranica ne postoji',
+  description: 'Ova adresa ne postoji na sajtu PratiPlati. Vratite se na početnu stranu ili pogledajte kako PratiPlati prati uplate.',
+}
 
 export default function NotFound() {
   return (

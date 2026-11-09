@@ -23,3 +23,8 @@ export const NAV = [
 export const SITE_TITLE = 'PratiPlati | Evidencija i praćenje uplata za organizacije'
 export const SITE_DESCRIPTION =
   'PratiPlati vodi evidenciju obaveza, prati kašnjenja i šalje podsetnike, a članovi dostavljaju dokaz o uplati direktno kroz aplikaciju.'
+
+export const SITE_NAME = 'PratiPlati'
+
+/** Poslednja izmena politike privatnosti: tekst na stranici i datum u sitemap.xml */
+export const PRIVACY_UPDATED = { iso: '2026-10-19', label: '19. oktobar 2026.' }

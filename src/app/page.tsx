@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import Header from '@/components/Header'
 import Hero from '@/components/sections/Hero'
 import HowItWorks from '@/components/sections/HowItWorks'
@@ -14,6 +15,11 @@ import VideoDialog from '@/components/video/VideoDialog'
 import CurlObserver from '@/components/motion/CurlObserver'
 import LinkOpenPing from '@/components/LinkOpenPing'
 import posterHero from '@/assets/poster-hero.jpg'
+
+// Naslov i opis dolaze iz layouta, ovde samo kanonska adresa
+export const metadata: Metadata = {
+  alternates: { canonical: '/' },
+}
 
 export default function Home() {
   return (
