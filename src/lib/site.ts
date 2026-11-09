@@ -28,3 +28,9 @@ export const SITE_NAME = 'PratiPlati'
 
 /** Poslednja izmena politike privatnosti: tekst na stranici i datum u sitemap.xml */
 export const PRIVACY_UPDATED = { iso: '2026-10-19', label: '19. oktobar 2026.' }
+
+/** Zajednicka Open Graph polja. Stranica koja zada svoj openGraph zamenjuje ceo objekat iz layouta, pa ova polja ukljucuje sama. */
+export const OG_BASE = { type: 'website', siteName: SITE_NAME, locale: 'sr_RS' } as const
+
+/** Ista slika kao src/app/opengraph-image.jpg, za podstranice koje zadaju svoj openGraph (tada se slika iz fajla ne nasledjuje) */
+export const OG_IMAGE = { url: '/opengraph-image.jpg', width: 1200, height: 630, type: 'image/jpeg', alt: 'PratiPlati: telefon sa obavezom i dokazom o uplati' }

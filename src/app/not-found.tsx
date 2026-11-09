@@ -1,10 +1,15 @@
 import type { Metadata } from 'next'
 import Header from '@/components/Header'
+import { OG_BASE } from '@/lib/site'
 import Footer from '@/components/sections/Footer'
 
+const TITLE = 'Stranica ne postoji'
+const DESCRIPTION = 'Ova adresa ne postoji na sajtu PratiPlati. Vratite se na početnu stranu ili pogledajte kako PratiPlati prati uplate.'
+
 export const metadata: Metadata = {
-  title: 'Stranica ne postoji',
-  description: 'Ova adresa ne postoji na sajtu PratiPlati. Vratite se na početnu stranu ili pogledajte kako PratiPlati prati uplate.',
+  title: TITLE,
+  description: DESCRIPTION,
+  openGraph: { ...OG_BASE, title: `${TITLE} | PratiPlati`, description: DESCRIPTION },
 }
 
 export default function NotFound() {

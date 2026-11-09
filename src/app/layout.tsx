@@ -4,18 +4,17 @@ import '@fontsource-variable/manrope'
 import '@/styles'
 import { Analytics } from '@vercel/analytics/next'
 import SvgSprite from '@/components/SvgSprite'
-import { APP_LOGIN_URL, CONTACT_EMAIL, PHONE, SITE_DESCRIPTION, SITE_NAME, SITE_TITLE, SITE_URL } from '@/lib/site'
+import { APP_LOGIN_URL, CONTACT_EMAIL, OG_BASE, PHONE, SITE_DESCRIPTION, SITE_NAME, SITE_TITLE, SITE_URL } from '@/lib/site'
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: { default: SITE_TITLE, template: `%s | ${SITE_NAME}` },
   description: SITE_DESCRIPTION,
   openGraph: {
-    type: 'website',
-    siteName: SITE_NAME,
-    locale: 'sr_RS',
+    ...OG_BASE,
     title: 'PratiPlati | Jedan sistem za potpunu kontrolu nad uplatama',
     description: SITE_DESCRIPTION,
+    url: '/',
   },
   twitter: { card: 'summary_large_image' },
 }

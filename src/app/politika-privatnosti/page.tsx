@@ -1,12 +1,16 @@
 import type { Metadata } from 'next'
 import Header from '@/components/Header'
 import Footer from '@/components/sections/Footer'
-import { CONTACT_EMAIL, PRIVACY_UPDATED } from '@/lib/site'
+import { CONTACT_EMAIL, OG_BASE, OG_IMAGE, PRIVACY_UPDATED } from '@/lib/site'
+
+const TITLE = 'Politika privatnosti'
+const DESCRIPTION = 'Kako PratiPlati obrađuje podatke koje ostavite na sajtu i kroz formu za ponudu.'
 
 export const metadata: Metadata = {
-  title: 'Politika privatnosti',
-  description: 'Kako PratiPlati obrađuje podatke koje ostavite na sajtu i kroz formu za ponudu.',
+  title: TITLE,
+  description: DESCRIPTION,
   alternates: { canonical: '/politika-privatnosti' },
+  openGraph: { ...OG_BASE, title: `${TITLE} | PratiPlati`, description: DESCRIPTION, url: '/politika-privatnosti', images: [OG_IMAGE] },
 }
 
 const UPDATED = PRIVACY_UPDATED.label
